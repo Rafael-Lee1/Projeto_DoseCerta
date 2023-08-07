@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MeuMedicamento Web</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS externo -->
+</head>
+<body>
+    <header>
+        <h1>MeuMedicamento Web</h1>
+    </header>
+
+    <main>
+        <section id="cadastrar-medicamento">
+            <h2>Cadastrar Novo Medicamento:</h2>
+            <form id="medicamento-form">
+                <label for="nome">Nome do Medicamento:</label>
+                <input type="text" id="nome" required>
+
+                <label for="dosagem">Dosagem:</label>
+                <input type="text" id="dosagem" required>
+
+                <!-- Mais campos para a forma de administração e frequência diária -->
+
+                <button type="submit">Cadastrar Medicamento</button>
+            </form>
+        </section>
+
+        <section id="cadastrar-dose">
+            <h2>Cadastrar Nova Dose:</h2>
+            <form id="dose-form">
+                <label for="medicamento">Escolha o Medicamento:</label>
+                <select id="medicamento" required>
+                    <!-- Opções de medicamentos serão preenchidas dinamicamente com JavaScript -->
+                </select>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" required>
+
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" required>
+
+                <button type="submit">Cadastrar Dose</button>
+            </form>
+        </section>
+
+        <section id="calendario">
+            <h2>Calendário de Doses:</h2>
+            <!-- O calendário de doses será preenchido dinamicamente com JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MeuMedicamento Web</p>
+    </footer>
+
+    <!-- Scripts JavaScript serão incluídos aqui -->
+</body>
+</html>
