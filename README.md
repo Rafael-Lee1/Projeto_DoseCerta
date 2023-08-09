@@ -15,7 +15,7 @@ O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, 
 
 # Descrição
 
-O projeto consiste no desenvolvimento de um aplicativo web chamado MeuMedicamento, que tem como objetivo auxiliar os usuários a gerenciar suas prescrições médicas, fornecendo lembretes de doses e facilitando o acompanhamento do tratamento. O aplicativo será intuitivo, acessível e fácil de usar, tornando-o adequado para pessoas de todas as idades.
+O projeto consiste no desenvolvimento de um aplicativo web chamado Dose Certa, que tem como objetivo auxiliar os usuários a gerenciar suas prescrições médicas, fornecendo lembretes de doses e facilitando o acompanhamento do tratamento. O aplicativo será intuitivo, acessível e fácil de usar, tornando-o adequado para pessoas de todas as idades.
 
 O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, prescrições médicas e respectivas doses e horários de administração dos medicamentos. A plataforma fornecerá um calendário interativo e um sistema de notificações para lembrar os usuários sobre os horários das doses, garantindo que o tratamento seja seguido corretamente.
 
@@ -25,14 +25,14 @@ O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, 
 - `Funcionalidade 4`: Histórico e Relatórios: Os usuários poderão acessar um histórico completo de suas doses anteriores e gerar relatórios de adesão ao tratamento para compartilhar com seus profissionais de saúde.
 - `Funcionalidade 5`: Segurança e Privacidade: O aplicativo garantirá a segurança dos dados do usuário, protegendo suas informações pessoais e médicas por meio de criptografia e práticas de segurança recomendadas.
 
-Acesse o endereço eletrônico <a href="https://meumedicamentoweb-production.up.railway.app/?">aqui</a> e saiba mais sobre as funcionalidades do projeto.
+Acesse o endereço eletrônico <a href="https://dosecerta.up.railway.app/?">aqui</a> e saiba mais sobre as funcionalidades do projeto.
 
 Descubra o Dose Certa e facilite o controle dos seus medicamentos diários. Organize suas doses de forma simples e eficiente, e tenha lembretes personalizados para nunca mais esquecer de tomar seus remédios. Cuide da sua saúde com praticidade e segurança, tornando cada dia mais saudável e tranquilo.
 
 # 📁 Acesso ao projeto
 
 **Você pode acessar os arquivos do projeto clicando <a href="https://github.com/Rafael-Lee1/MeuMedicamento_Web.git">aqui</a>.</p>
-**Você pode acessar o projeto clicando <a href="https://meumedicamentoweb-production.up.railway.app/?">aqui</a>.</p>
+**Você pode acessar o projeto clicando <a href="https://dosecerta.up.railway.app/?">aqui</a>.</p>
 
 # 🛠️ Tecnologias utilizadas
 
