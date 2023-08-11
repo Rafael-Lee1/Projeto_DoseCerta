@@ -37,7 +37,6 @@ Descubra o Dose Certa e facilite o controle dos seus medicamentos diários. Orga
 # 🛠️ Tecnologias utilizadas
 
 <div style="display: inline_block"><br>
-<img align="center" alt="Rafa-Bootstrap" height="40" style="border-radius:50px;" src="https://github.com/Rafael-Lee1/Icons/blob/f85d05ce344243c7a5f13ebe444b251000c1793a/Bootstrap%20(2).gif">
 <img align="center" alt="Rafa-Js" height="30" width="40" src="https://github.com/Rafael-Lee1/Icons/blob/f85d05ce344243c7a5f13ebe444b251000c1793a/icons8-javascript.gif">
 <img align="center" alt="Rafa-Sql" height="30" width="40" src="https://github.com/Rafael-Lee1/Icons/blob/43010fe49656f545bcb0d8d2a8d3b714d76ae36e/SQL.gif">
 <img align="center" alt="Rafa-Node" height="30" width="40" src="https://github.com/Rafael-Lee1/Icons/blob/90626b13b5acba7b6b2d97f4e38d9b1e4c22da66/nodejs.png">
@@ -50,7 +49,6 @@ Descubra o Dose Certa e facilite o controle dos seus medicamentos diários. Orga
 
 <pre class="notranslate"><code>
 -HTML
--Bootstrap
 -JavaScript
 -Node.js
 -CSS
@@ -61,5 +59,18 @@ Descubra o Dose Certa e facilite o controle dos seus medicamentos diários. Orga
 
 # Autores
 
-| [<img src="https://avatars.githubusercontent.com/u/115593138?s=400&u=c345c56a9a6c0718f52a868dc3f39fd8bdbc944d&v=4" width=115><br><sub>Rafael Lee</sub>](https://github.com/Rafael-Lee1) |
+| ![Image 1](https://avatars.githubusercontent.com/u/115593138?s=400&u=c345c56a9a6c0718f52a868dc3f39fd8bdbc944d&v=4) | ![Image 2](https://avatars.githubusercontent.com/u/81046850?v=4) | ![Image 3](https://avatars.githubusercontent.com/u/108960277?v=4) | ![Image 4](https://avatars.githubusercontent.com/u/14793244?v=4) | ![Image 5](https://avatars.githubusercontent.com/u/106563124?v=4) |
+| :---: | :---: | :---: | :---: | :---: |
+| Rafael Santos | Luana Gruber | Robson Dionisio | André Bezerra | Wander M P Nóbrega |
+
+
+
+
+
+
+
+
+
+
+
 
