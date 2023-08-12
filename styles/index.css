@@ -1,0 +1,62 @@
+.content{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+header{
+    grid-area: header;
+}
+
+#bg{
+    grid-area: left;
+    background: url(../imagens/medicamento.svg) no-repeat top/contain;
+    background-position-x: 0rem;
+    width: min(32.3rem, 75%);
+}
+
+main{
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+    margin-top: -12rem;
+}
+
+main .container{
+    width: min(36.3rem, 100%);
+}
+
+main h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+/* Create Balls */
+.ball{
+    width: 21.2rem;
+    height: 21.2rem;
+    clip-path: circle();
+    position: fixed;
+    opacity: 0.1;
+}
+
+.ball.top{
+    background: var(--red);
+    width: 63.3rem;
+    height: 63.3rem;
+    right: -35rem;
+    top: -46rem;
+}
+
+.ball.bottom{
+    background: var(--blue);
+    right: 35.6rem;
+    bottom: -15rem;
+}
