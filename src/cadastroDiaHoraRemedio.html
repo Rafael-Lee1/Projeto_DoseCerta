@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/formularios.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+    <title>Dose Certa</title>
+    
+</head>
+<body>
+    <body>
+        <div id="home" class="content">
+        <header>
+            <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
+        </header>
+    
+        <div id="bg-cadastro">
+            <div class="ball top"></div>
+            <div class="ball bottom"></div>
+        </div>
+    
+        <main>
+            <div class="container">
+                <section>
+                    <h2>Cadastro remédio</h2>
+                        <form action="/" method="POST">
+                            <label for="dia-hora-remedio">DIA E HORÁRIO DO REMÉDIO</label>
+                            <div class="div-tipo-remedio">
+                                <input type="time" id="dia-hora-remedio" value="00:00">
+                                <Select id="dia-remedio">
+                                    <option value="todos">Todos os dias</option>
+                                    <option value="final">Final de semana</option>
+                                    <option value="segsex">Segunda a sexta</option>
+                                    <option value="seg">Segunda</option>
+                                    <option value="ter">Terça</option>
+                                    <option value="qua">Quarta</option>
+                                    <option value="qui">Quinta</option>
+                                    <option value="sex">Sexta</option>
+                                </Select>
+                            </div>
+                            <button id="adicionar-dia">Adicionar mais um</button>
+                            <button type="submit"><a href="./cadastroTipoRemedio.html">Avançar</a></button>
+                            <button class="grey"><a href="./cadastroNomeRemedio.html">Voltar</a></button>
+                        </form>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

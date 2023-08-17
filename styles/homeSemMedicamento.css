@@ -1,0 +1,74 @@
+.content{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+header{
+    grid-area: header;
+}
+
+.img-medico{
+    max-width: 70%;
+    border-radius: 50%;
+    margin-top: 3rem;
+}
+
+.boas-vindas{
+    margin-top: 3rem;
+    margin-bottom: 0.5rem; 
+}
+
+/* Separator line */
+.separator{
+    background: var(--grey-light);
+    max-width: 90%;
+    height: 1px;
+    margin-bottom: 1rem;
+}
+
+.img-cirurgiao{
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 4rem;
+}
+
+section{
+    display: grid;
+    grid-template-columns:30% 70%;
+    max-width: 100%;
+    margin-bottom: -25rem;
+}
+
+section div{
+    max-width: 100%;
+}
+
+.section-main{
+    display: grid;
+    grid-template-columns:40% 100%;
+    max-width: 100%;
+    margin-top: 30rem;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(16px, 5vw, 2.3rem);
+}
+
+main{
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+    margin-top: -35rem;
+}
+
+main .container{
+    width: min(50.3rem, 100%);
+}
