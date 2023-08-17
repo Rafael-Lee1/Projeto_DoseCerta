@@ -35,8 +35,8 @@
                         <form action="/" method="POST">
                             <label for="dia-hora-remedio">DIA E HORÁRIO DO REMÉDIO</label>
                             <div class="div-tipo-remedio">
-                                <input class="hora-remedio" type="time" id="dia-hora-remedio" value="00:00">
-                                <Select class="dia-remedio">
+                                <input type="time" id="dia-hora-remedio" value="00:00">
+                                <Select id="dia-remedio">
                                     <option value="todos">Todos os dias</option>
                                     <option value="final">Final de semana</option>
                                     <option value="segsex">Segunda a sexta</option>
@@ -47,7 +47,7 @@
                                     <option value="sex">Sexta</option>
                                 </Select>
                             </div>
-                            <button class="adicionar-dia">Adicionar mais um</button>
+                            <button id="adicionar-dia">Adicionar mais um</button>
                             <button type="submit"><a href="./cadastroTipoRemedio.html">Avançar</a></button>
                             <button class="grey"><a href="./cadastroNomeRemedio.html">Voltar</a></button>
                         </form>

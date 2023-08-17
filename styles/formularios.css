@@ -41,10 +41,10 @@ section img{
     max-width: 50%;
 }
 
-.qnt-remedio{
+#qnt-remedio{
     max-width: 7.5rem;
     padding: rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 
 }
 
@@ -54,7 +54,7 @@ select{
     border-color: var(--blue);
     height: 4.5rem;
     padding: 1rem;
-    width: 20rem;
+    width: 21.5rem;
     border: .2rem solid var(--blue);
     font-family: 'Poppins', bold;
     color: var(--black);
@@ -85,16 +85,16 @@ span{
     margin-bottom: 1rem;
 }
 
-.hora-remedio{
+#dia-hora-remedio{
     width: 14rem;
     margin-right: 1rem;
 }
 
-.dia-remedio{
+#dia-remedio{
     width: 15rem;
 }
 
-.adicionar-dia{
+#adicionar-dia{
     margin-bottom: 6rem;
     background-color: var(--red-light);
     border-color: var(--red-light);
