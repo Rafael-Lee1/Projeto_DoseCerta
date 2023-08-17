@@ -1,0 +1,101 @@
+.content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+header{
+    grid-area: header;
+}
+
+#bg{
+    grid-area: left;
+    background: url(../imagens/medicamento.svg) no-repeat top/contain;
+    background-position-x: 0rem;
+    width: min(32.3rem, 75%);
+}
+
+#bg-cadastro{
+    grid-area: left;
+    background: url(../imagens/ferramentas-medicas.svg) no-repeat top/contain;
+    background-position-x: 0rem;
+    width: min(32.3rem, 75%);
+}
+
+main{
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    margin-top: -12rem;
+}
+
+main .container{
+    width: min(36.3rem, 100%);
+}
+
+section img{
+    max-width: 50%;
+}
+
+.qnt-remedio{
+    max-width: 7.5rem;
+    padding: rem;
+    margin-right: 2rem;
+
+}
+
+select{
+    background: var(--white-input);
+    border-radius: .8rem;
+    border-color: var(--blue);
+    height: 4.5rem;
+    padding: 1rem;
+    width: 20rem;
+    border: .2rem solid var(--blue);
+    font-family: 'Poppins', bold;
+    color: var(--black);
+}
+
+option{
+    font-family: 'Poppins', bold;
+    color: var(--black);
+}
+
+.input-refeicao{
+    max-width: 2rem;
+    margin-right: 1rem;
+}
+
+span{
+    font-family: 'Poppins', bold;
+    color: var(--grey-dark);
+    margin-right: 0.5rem;
+}
+
+.div-tipo-remedio{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hora-remedio{
+    width: 14rem;
+    margin-right: 1rem;
+}
+
+.dia-remedio{
+    width: 15rem;
+}
+
+.adicionar-dia{
+    margin-bottom: 6rem;
+    background-color: var(--red-light);
+    border-color: var(--red-light);
+}
