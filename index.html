@@ -1,58 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>MeuMedicamento Web</title>
-    <link rel="stylesheet" href="style.css"> <!-- Vincula o arquivo CSS externo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          flex-direction: column;
+        }
+        .buttons-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          flex-wrap: wrap;
+        }
+        .button-column {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 10px;
+        }
+        .button {
+          display: block;
+          width: 250px;
+          height: 100px;
+          margin: 5px 0;
+          text-align: center;
+          line-height: 100px;
+          font-size: 18px;
+          background-color: #ffffff;
+          color: #00008B;
+          text-decoration: none;
+          border-radius: 5px;
+          border: 2px solid blue;
+          position: relative; /* Adicionado para posicionar ícones */
+        }
+        .action-button {
+          font-size: 20px;
+          cursor: pointer;
+          position: absolute;
+          top: 5px;
+        }
+        .edit-button {
+          right: 80px;
+        }
+        .delete-button {
+          right: 40px;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>MeuMedicamento Web</h1>
-    </header>
+        <body>
+        <div class="buttons-container">
+            <div class="button-column">
+                <div class="button">
+            <h6 class="remedio-nome">Nome do Remédio</h6>
+            <div class="remedio-info">
+                <span>Dia: Segunda-feira</span>
+                <span>Hora: 08:00 AM</span>
+            </div>
+            <span class="action-button edit-button" onclick="editarBotao(this)">
+                <i class="fas fa-edit"></i>
+            </span>
+            Botão 1
+            <span class="action-button delete-button" onclick="excluirBotao(this)">
+                <i class="fas fa-trash"></i>
+            </span>
+            </div>
+            <div class="button">
+                <span class="action-button edit-button" onclick="editarBotao(this)">
+                    <i class="fas fa-edit"></i>
+                </span>
+                Botão 2
+                <span class="action-button delete-button" onclick="excluirBotao(this)">
+                    <i class="fas fa-trash"></i>
+                </span>
+            </div>
+        </div>
+        <div class="button-column">
+            <div class="button">
+                <span class="action-button edit-button" onclick="editarBotao(this)">
+                    <i class="fas fa-edit"></i>
+                </span>
+                Botão 3
+                <span class="action-button delete-button" onclick="excluirBotao(this)">
+                    <i class="fas fa-trash"></i>
+                </span>
+            </div>
+            <div class="button">
+                <span class="action-button edit-button" onclick="editarBotao(this)">
+                    <i class="fas fa-edit"></i>
+                </span>
+                Botão 4
+                <span class="action-button delete-button" onclick="excluirBotao(this)">
+                    <i class="fas fa-trash"></i>
+                </span>
+            </div>
+        </div>
+        <div class="button-column">
+            <div class="button">
+                <span class="action-button edit-button" onclick="editarBotao(this)">
+                    <i class="fas fa-edit"></i>
+                </span>
+                Botão 5
+                <span class="action-button delete-button" onclick="excluirBotao(this)">
+                    <i class="fas fa-trash"></i>
+                </span>
+            </div>
+            <div class="button">
+                <span class="action-button edit-button" onclick="editarBotao(this)">
+                    <i class="fas fa-edit"></i>
+                </span>
+                Botão 6
+                <span class="action-button delete-button" onclick="excluirBotao(this)">
+                    <i class="fas fa-trash"></i>
+                </span>
+            </div>
+        </div>
+        <div class="button-column">
+            <div class="button">
+                <span class="action-button edit-button" onclick="editarBotao(this)">
+                    <i class="fas fa-edit"></i>
+                </span>
+                Botão 7
+                <span class="action-button delete-button" onclick="excluirBotao(this)">
+                    <i class="fas fa-trash"></i>
+                </span>
+            </div>
+                <!-- Repita a estrutura dos botões aqui -->
+    </div>
+</div>
+<a href="cadastro.html">Cadastrar novo botão</a>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const remedio = localStorage.getItem("remedio");
+        const dia = localStorage.getItem("dia");
+        const hora = localStorage.getItem("hora");
 
-    <main>
-        <section id="cadastrar-medicamento">
-            <h2>Cadastrar Novo Medicamento:</h2>
-            <form id="medicamento-form">
-                <label for="nome">Nome do Medicamento:</label>
-                <input type="text" id="nome" required>
+        if (remedio && dia && hora) {
+            const botaoHTML = `
+                <div class="button">
+                    <span class="action-button edit-button" onclick="editarBotao(this)">
+                        <i class="fas fa-edit"></i>
+                    </span>
+                    <h1>${remedio}</h1>
+                    <p>${dia} - ${hora}</p>
+                    <span class="action-button delete-button" onclick="excluirBotao(this)">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                </div>
+            `;
 
-                <label for="dosagem">Dosagem:</label>
-                <input type="text" id="dosagem" required>
+            const buttonColumn = document.querySelector(".button-column");
+            buttonColumn.innerHTML += botaoHTML;
 
-                <!-- Mais campos para a forma de administração e frequência diária -->
+            localStorage.removeItem("remedio");
+            localStorage.removeItem("dia");
+            localStorage.removeItem("hora");
+        }
+    });
 
-                <button type="submit">Cadastrar Medicamento</button>
-            </form>
-        </section>
+    function editarBotao(button) {
+        // Obtém o texto do botão (nome do remédio) que será passado para a página de edição
+        var nomeRemedio = button.parentNode.textContent.trim();
 
-        <section id="cadastrar-dose">
-            <h2>Cadastrar Nova Dose:</h2>
-            <form id="dose-form">
-                <label for="medicamento">Escolha o Medicamento:</label>
-                <select id="medicamento" required>
-                    <!-- Opções de medicamentos serão preenchidas dinamicamente com JavaScript -->
-                </select>
+        // Redireciona para a página de edição com o parâmetro do nome do remédio
+        window.location.href = "edicao.html?remedio=" + encodeURIComponent(nomeRemedio);
+    }
 
-                <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" required>
-
-                <label for="horario">Horário:</label>
-                <input type="time" id="horario" required>
-
-                <button type="submit">Cadastrar Dose</button>
-            </form>
-        </section>
-
-        <section id="calendario">
-            <h2>Calendário de Doses:</h2>
-            <!-- O calendário de doses será preenchido dinamicamente com JavaScript -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 MeuMedicamento Web</p>
-    </footer>
-
-    <!-- Scripts JavaScript serão incluídos aqui -->
+    function excluirBotao(button) {
+        console.log("Botão excluído:", button.parentNode.textContent);
+        button.parentNode.parentNode.removeChild(button.parentNode);
+    }
+</script>
+ <!-- Coloque seu código JavaScript aqui! ( Use <script src="script.js"></script> ) -->
 </body>
 </html>
