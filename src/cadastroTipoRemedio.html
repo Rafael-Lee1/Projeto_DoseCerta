@@ -29,6 +29,11 @@
     
         <main>
             <div class="container">
+                <section class="section-etapa">
+                    <a href="./cadastroNomeRemedio.html"><button data-tooltip="Primeira etapa" class="btn-etapa-inicio btn-etapa">1</button></a>
+                    <a href="./cadastroDiaHoraRemedio.html"><button data-tooltip="Etapa anterior" class=" btn-etapa-meio btn-etapa">2</button></a>
+                    <button data-tooltip="Você está aqui! última etapa" class="btn-etapa-destaque btn-etapa-final btn-etapa">3</button>
+                </section>
                 <section>
                     <h2>Cadastro remédio</h2>
                         <form action="/" method="POST">
@@ -42,14 +47,16 @@
                                     <option value="gotas">Gotas</option>
                                 </Select>
                             </div>
-                            <label for="refeicao">ANTES, DURANTE OU DEPOIS DA REFEIÇÃO</label>
+                            <label for="refeicao">ANTES OU DEPOIS DA REFEIÇÃO</label>
                             <div class="div-tipo-remedio">
-                                <input class="input-refeicao"  type="radio" name="refeicao" value="antes"><span>ANTES</span>
-                                <input class="input-refeicao" type="radio" name="refeicao" value="durante"><span>DURANTE</span>
-                                <input class="input-refeicao" type="radio" name="refeicao" value="depois"><span>DEPOIS</span>
+                                <Select class="section-tipo-refeicao">
+                                    <option value="antes">Antes da refeição</option>
+                                    <option value="durante">Durante a refeição</option>
+                                    <option value="depois">Depois da refeição</option>
+                                </Select>
                             </div>
                             <button type="submit">Salvar remédio</button>
-                            <button class="grey"><a href="./cadastroDiaHoraRemedio.html">Voltar</a></button>
+                            <a href="./cadastroDiaHoraRemedio.html"><button class="grey">Voltar</button></a>
                         </form>
                 </section>
             </div>

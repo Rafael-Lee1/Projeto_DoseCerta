@@ -29,8 +29,7 @@ header{
 main{
     grid-area: right;
     display: flex;
-    align-items: center;
-    margin-top: -12rem;
+    margin-top: -2rem;
 }
 
 main .container{
@@ -65,11 +64,6 @@ option{
     color: var(--black);
 }
 
-.input-refeicao{
-    max-width: 2rem;
-    margin-right: 1rem;
-}
-
 span{
     font-family: 'Poppins', bold;
     color: var(--grey-dark);
@@ -80,9 +74,14 @@ span{
     align-items: center;
     display: flex;
     flex-direction: row;
+    width: 100%;
     flex-wrap: wrap;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.section-tipo-refeicao{
+    width: 30rem;
 }
 
 #dia-hora-remedio{
@@ -98,4 +97,64 @@ span{
     margin-bottom: 6rem;
     background-color: var(--red-light);
     border-color: var(--red-light);
+}
+
+.section-etapa{
+    display: flex;
+}
+
+.btn-etapa{
+    font-size: 2.5rem;
+    max-width: 9.8rem;
+    max-height: 3rem;
+    border: none;
+    margin-bottom: 3rem;
+    background-color: var(--blue);
+    opacity: 0.5;
+}
+
+.btn-etapa-meio{
+    border-radius: 0;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+}
+
+.btn-etapa-final{
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.btn-etapa-inicio{
+    border-radius: 1rem 0rem 0rem 1rem;   
+}
+
+.btn-etapa-destaque{
+    max-height: 3.3rem;
+    box-shadow: 3px 3px 2px var(--grey-blue);
+    background-color: var(--blue);
+    margin-top: 1.3rem;
+    opacity: 100;
+}
+
+[data-tooltip] {
+    position:static;
+}
+
+[data-tooltip]:after {
+    font-size: 1.5rem;
+    display: none;
+    position: absolute;
+    top: -3.5rem;
+    border-radius: 3px;
+    padding: 0.2rem;
+    left: calc(100% + -10rem);
+    content: attr(data-tooltip);
+    white-space: nowrap;
+    background-color: var(--white-input);
+    border: 1px solid var(--black);
+    color: var(--black);
+    opacity: 0.8;
+}
+  
+[data-tooltip]:hover:after {
+    display: block;
 }

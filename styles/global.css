@@ -8,7 +8,6 @@
 
 html{
     --black: #0D114F;
-    --white: #FAFCFD;
     --white-input: #F5F5F5;
     --red: #E24E6A;
     --red-light: #de95a2;
@@ -22,6 +21,7 @@ html{
 
     /*1 rem = 16px (User Agent) = 100% (User Agent)*/
     font-size: 62.5%; /* = 10px */
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -37,7 +37,7 @@ a{
 
 body, button, input, textarea{
     /*Intervalo de tamanho = no menor tamanho 14px, padrão 1.6rem, maior 2vw */
-    font-size: clamp(18px, 1.6rem, 2vw);
+    font-size: clamp(16px, 1.6rem, 2vw);
     font-family: 'Open Sans', sans-serif;
     /*font-family: 'Poppins', sans-serif;*/
 }
@@ -88,7 +88,7 @@ label {
 main h2{
     font-family: 'Poppins', sans-serif;
     color: var(--black);
-    margin-bottom: 2.4rem;
+    margin-bottom: 2rem;
 }
 
 main p{
@@ -117,7 +117,7 @@ button, .button{
     justify-content: center;
 
     background: var(--blue);
-    color: var(--white);
+    color: var(--backgroud);
     margin-top: 1.5rem;
 
     transition: filter .2s;
@@ -134,6 +134,6 @@ button.grey:hover{
 
 button.grey,
 .button.grey{
-    background: var(--white);
+    background: var(--backgroud);
     color: var(--blue);
 }
