@@ -1,0 +1,82 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body, button, input, textarea {
+    font-size: clamp(15px, 1.6rem, 2vw);
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    padding: auto;
+}
+
+.gender-input {
+    display: block;
+    
+    margin-top: 4px;
+    
+}
+
+.gender-input label {
+    display: block;
+    align-items: center;
+    margin-top: -15px;
+    padding: 0;
+}
+
+
+.content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+#bg{
+    grid-area: left;
+    background: url(../imagens/medicamento.svg) no-repeat top/contain;
+    background-position-x: 0rem;
+    width: min(32.3rem, 75%);
+}
+
+#bg-cadastro{
+    grid-area: left;
+    background: url(../imagens/ferramentas-medicas.svg) no-repeat top/contain;
+    background-position-x: 0rem;
+    width: min(40.3rem, 75%);
+}
+
+
+
+section img{
+    max-width: 50%;
+}
+
+
+
+header {
+    grid-area: header;
+}
+
+
+form {
+    display: block;
+    margin-top: 0;
+}
+
+
+
+
+main{
+    margin-top: -35px;
+    margin-left: 0px;
+    grid-area: right;
+}
