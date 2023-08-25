@@ -30,10 +30,15 @@
     
         <main>
             <div class="container">
+                <section class="section-etapa">
+                    <a href="./cadastroNomeRemedio.html"><button data-tooltip="Etapa anterior!" class="btn-etapa-inicio btn-etapa">1</button></a>
+                    <button data-tooltip="Você está aqui!" class="btn-etapa-destaque  btn-etapa-meio btn-etapa">2</button>
+                    <a href="./cadastroTipoRemedio.html"><button data-tooltip="Última etapa!" class="btn-etapa-final btn-etapa">3</button></a>
+                </section>
                 <section>
                     <h2>Cadastro remédio</h2>
                         <form action="/" method="POST">
-                            <label for="dia-hora-remedio">DIA E HORÁRIO DO REMÉDIO</label>
+                            <label for="dia-hora-remedio">HORÁRIO E DIA DO REMÉDIO</label>
                             <div class="div-tipo-remedio">
                                 <input type="time" id="dia-hora-remedio" value="00:00">
                                 <Select id="dia-remedio">
@@ -48,8 +53,8 @@
                                 </Select>
                             </div>
                             <button id="adicionar-dia">Adicionar mais um</button>
-                            <button type="submit"><a href="./cadastroTipoRemedio.html">Avançar</a></button>
-                            <button class="grey"><a href="./cadastroNomeRemedio.html">Voltar</a></button>
+                            <a href="./cadastroTipoRemedio.html"><button type="submit">Avançar</button></a>
+                            <a href="./cadastroNomeRemedio.html"><button class="grey">Voltar</a></button></a>
                         </form>
                 </section>
             </div>

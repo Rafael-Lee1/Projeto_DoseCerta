@@ -29,12 +29,17 @@
     
         <main>
             <div class="container">
+                <section class="section-etapa">
+                    <button data-tooltip="Você está aqui!" class="btn-etapa-destaque btn-etapa-inicio btn-etapa">1</button>
+                    <a href="./cadastroDiaHoraRemedio.html"><button data-tooltip="Próxima etapa!"class="btn-etapa-meio btn-etapa">2</button></a>
+                    <a href="./cadastroTipoRemedio.html"><button data-tooltip="Etapa final!"class="btn-etapa-final btn-etapa">3</button></a>
+                </section>
                 <section>
                     <h2>Cadastro remédio</h2>
                         <form action="/" method="POST">
                             <label for="nome-remedio">NOME DO REMÉDIO</label>
                             <input type="text" id="nome-remedio" name="nome-remedio"  placeholder="Ex.: Omeprazol">
-                            <button type="submit"><a href="./cadastroDiaHoraRemedio.html">Avançar</a></button>
+                            <a href="./cadastroDiaHoraRemedio.html"><button type="submit">Avançar</button></a>
                             <button class="grey">Voltar</button>
                         </form>
                 </section>
