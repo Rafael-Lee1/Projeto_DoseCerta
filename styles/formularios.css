@@ -64,11 +64,6 @@ option{
     color: var(--black);
 }
 
-.input-refeicao{
-    max-width: 2rem;
-    margin-right: 1rem;
-}
-
 span{
     font-family: 'Poppins', bold;
     color: var(--grey-dark);
@@ -83,6 +78,10 @@ span{
     flex-wrap: wrap;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.section-tipo-refeicao{
+    width: 30rem;
 }
 
 #dia-hora-remedio{
