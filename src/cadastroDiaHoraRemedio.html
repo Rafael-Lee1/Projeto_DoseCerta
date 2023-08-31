@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
+    <!-- JAVASCRIPT -->
+    <script src="../js/cadastroRemedio.js"></script>
+
     <title>Dose Certa</title>
     
 </head>
@@ -31,17 +34,17 @@
         <main>
             <div class="container">
                 <section class="section-etapa">
-                    <a href="./cadastroNomeRemedio.html"><button data-tooltip="Etapa anterior!" class="btn-etapa-inicio btn-etapa">1</button></a>
+                    <a href="cadastroNomeRemedio.html"><button data-tooltip="Etapa anterior!" class="btn-etapa-inicio btn-etapa" onclick="adicionarDiaHoraRemedio()">1</button></a>
                     <button data-tooltip="Você está aqui!" class="btn-etapa-destaque  btn-etapa-meio btn-etapa">2</button>
-                    <a href="./cadastroTipoRemedio.html"><button data-tooltip="Última etapa!" class="btn-etapa-final btn-etapa">3</button></a>
+                    <a href="cadastroTipoRemedio.html"><button data-tooltip="Última etapa!" class="btn-etapa-final btn-etapa" onclick="adicionarDiaHoraRemedio()">3</button></a>
                 </section>
                 <section>
                     <h2>Cadastro remédio</h2>
-                        <form action="/" method="POST">
-                            <label for="dia-hora-remedio">HORÁRIO E DIA DO REMÉDIO</label>
+                        <form>
                             <div class="div-tipo-remedio">
-                                <input type="time" id="dia-hora-remedio" value="00:00">
-                                <Select id="dia-remedio">
+                                <label for="dia-hora-remedio">HORÁRIO E DIA DO REMÉDIO</label>
+                                <input type="time" id="dia-hora-remedio" name="dia-hora-remedio">
+                                <Select id="dia-remedio" name="dia-remedio">
                                     <option value="todos">Todos os dias</option>
                                     <option value="final">Final de semana</option>
                                     <option value="segsex">Segunda a sexta</option>
@@ -53,8 +56,8 @@
                                 </Select>
                             </div>
                             <button id="adicionar-dia">Adicionar mais um</button>
-                            <a href="./cadastroTipoRemedio.html"><button type="submit">Avançar</button></a>
-                            <a href="./cadastroNomeRemedio.html"><button class="grey">Voltar</a></button></a>
+                            <button onclick="adicionarDiaHoraRemedio()" type="button">Avançar</button>
+                            <a href="cadastroNomeRemedio.html"><button type="button" class="grey">Voltar</button></a>
                         </form>
                 </section>
             </div>

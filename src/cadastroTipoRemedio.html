@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
+    <!-- JAVASCRIPT -->
+    <script src="../js/cadastroRemedio.js"></script>
+    
     <title>Dose Certa</title>
 </head>
 <body>
@@ -30,33 +33,33 @@
         <main>
             <div class="container">
                 <section class="section-etapa">
-                    <a href="./cadastroNomeRemedio.html"><button data-tooltip="Primeira etapa" class="btn-etapa-inicio btn-etapa">1</button></a>
-                    <a href="./cadastroDiaHoraRemedio.html"><button data-tooltip="Etapa anterior" class=" btn-etapa-meio btn-etapa">2</button></a>
+                    <a href="./cadastroNomeRemedio.html"><button data-tooltip="Primeira etapa" class="btn-etapa-inicio btn-etapa" onclick="adicionarTipoRemedio()">1</button></a>
+                    <a href="./cadastroDiaHoraRemedio.html"><button data-tooltip="Etapa anterior" class=" btn-etapa-meio btn-etapa" onclick="adicionarTipoRemedio()">2</button></a>
                     <button data-tooltip="Você está aqui! última etapa" class="btn-etapa-destaque btn-etapa-final btn-etapa">3</button>
                 </section>
                 <section>
                     <h2>Cadastro remédio</h2>
-                        <form action="/" method="POST">
-                            <label for="tipo-remedio">QUANTIDADE E TIPO DO REMÉDIO</label>
+                        <form>
                             <div class="div-tipo-remedio">
-                                <input id="qnt-remedio" type="number" name="tipo-remedio" placeholder="Ex.:1">
-                                <Select>
+                                <label for="qnt-remedio">QUANTIDADE E TIPO DO REMÉDIO</label>
+                                <input id="qnt-remedio" type="number" name="qnt-remedio" placeholder="Ex.:1">
+                                <Select id="tipo-remedio" name="tipo-remedio">
                                     <option value="comprimido">Comprimido</option>
                                     <option value="capsula">Capsula</option>
-                                    <option value="injecao">Injeção</option>
+                                    <option value="injeção">Injeção</option>
                                     <option value="gotas">Gotas</option>
                                 </Select>
                             </div>
                             <label for="refeicao">ANTES OU DEPOIS DA REFEIÇÃO</label>
                             <div class="div-tipo-remedio">
-                                <Select class="section-tipo-refeicao">
-                                    <option value="antes">Antes da refeição</option>
-                                    <option value="durante">Durante a refeição</option>
-                                    <option value="depois">Depois da refeição</option>
+                                <Select class="section-tipo-refeicao" id="refeicao" name="refeicao">
+                                    <option value="Antes da">Antes da refeição</option>
+                                    <option value="Durante a">Durante a refeição</option>
+                                    <option value="Depois da">Depois da refeição</option>
                                 </Select>
                             </div>
-                            <button type="submit">Salvar remédio</button>
-                            <a href="./cadastroDiaHoraRemedio.html"><button class="grey">Voltar</button></a>
+                            <a href="index.html"><button type="button" onclick="adicionarTipoRemedio()">Salvar remédio</button></a>
+                            <a href="cadastroDiaHoraRemedio.html"><button type="button" class="grey" onclick="adicionarTipoRemedio()">Voltar</button></a>
                         </form>
                 </section>
             </div>

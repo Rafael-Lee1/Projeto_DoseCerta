@@ -44,7 +44,6 @@ section img{
     max-width: 7.5rem;
     padding: rem;
     margin-right: 1rem;
-
 }
 
 select{
@@ -78,6 +77,10 @@ span{
     flex-wrap: wrap;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+.div-tipo-remedio > label{
+    width: 100%;
 }
 
 .section-tipo-refeicao{
