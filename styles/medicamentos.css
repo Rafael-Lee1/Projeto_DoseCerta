@@ -1,0 +1,164 @@
+.content{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3rem 2fr;
+    grid-template-areas: 
+    'header header'
+    'left right'
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    width: 80%;
+    margin: 2.5rem auto;
+}
+
+.img-medico{
+    max-width: 65%;
+    border-radius: 50%;
+}
+
+.img-lua{
+    max-width: 20%;
+}
+
+.boas-vindas{
+    margin-top: 3rem;
+    margin-bottom: 0.5rem; 
+}
+
+/* Separator line */
+.separator{
+    background: var(--grey-light);
+    max-width: 43%;
+    height: 1px;
+    margin-bottom: 1rem;
+}
+
+.img-cirurgiao{
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.section-boas-vindas{
+    display: grid;
+    grid-template-columns:20% 80%;
+    max-width: 100%;
+    margin-top: -3rem;
+}
+
+section div{
+    max-width: 100%;
+}
+
+.section-meus-medicamentos{
+    margin-top: 2rem;
+}
+
+.section-meus-medicamentos p{
+    color: var(--blue);
+    margin-top: -0.8rem;
+}
+
+.section-main{
+    display: grid;
+    grid-template-columns:25% 75%;
+    max-width: 100%;
+    margin-top: 5.4rem;
+    padding-top: 2rem;
+}
+
+.section-remedios{
+    display: grid;
+    grid-template-columns:49% 49%;
+    max-width: 100%;
+}
+
+.div-detalhe-remedio{
+    display: grid;
+    max-width: 100%;
+    margin-top: 1.2rem;
+    margin-right: 3%;
+    grid-template-columns:15% 55% 15% 15%;
+    padding: .5rem;
+    background: var(--blue-light);
+    border-radius: .6rem;
+    border: .2rem solid var(--blue);
+}
+
+.img-calendario{
+    margin-top: .7rem;
+    max-width: 75%;
+}
+
+.p-horario{
+    color: var(--black);
+    font-weight: 700;
+}
+
+.p-detalhe-remedio{
+    color: var(--grey-dark);
+    font-size: 1.3rem;
+}
+
+.div-detalhe-remedio:hover{
+    filter: brightness(1.1)
+}
+
+.button-lixeira{    
+    background: url(../imagens/lixeira.png) no-repeat top/contain;
+    background-position-x: 0rem;
+    max-width: 50%;
+    margin-left: 1.2rem;
+    margin-bottom: -1.8rem;
+    margin-top: 8%;
+    border: none;
+}
+
+.button-editar{    
+    background: url(../imagens/editar.png) no-repeat top/contain;
+    background-position-x: 0rem;
+    max-width: 50%;
+    margin-left: 1.4rem;
+    margin-bottom: -1.8rem;
+    margin-top: 8%;
+    border: none;
+}
+
+.div-button-remedio{
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+
+
+.div-button-remedio:hover{
+    width: 98%;
+}
+
+.div-button-remedio p {
+    font-size: 1.2rem;
+    color: var(--grey-dark);
+}
+
+.h2-nome-remedio{
+    font-size: 2rem;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(16px, 5vw, 2.3rem);
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
+
+main .container{
+    width: min(80rem, 100%);
+}
