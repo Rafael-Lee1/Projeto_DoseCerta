@@ -86,7 +86,8 @@ section div{
     padding: .5rem;
     background: var(--blue-light);
     border-radius: .6rem;
-    border: .2rem solid var(--blue);
+    border: 1.5px solid var(--blue);
+    box-shadow: 3px 3px 2px var(--grey-blue);
 }
 
 .img-calendario{
