@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/medicamentos.css">
+    <link rel="stylesheet" href="../styles/modal.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -106,7 +107,21 @@
                     </div>
                 </div>
             </section>
-            <a href="cadastroNomeRemedio.html"><button>Adicionar remédios</button></a>
+            <button class="open-modal">Adicionar remédios</button>
+        </div>
+        <!-- MODAL -->
+        <div id="fade" class="hide">
+        </div>
+        <div id="modal" class="hide">
+            <div class="modal-body">
+                <img class="img-medica-modal" src="../imagens/medica.png"/>
+                <h2>Será você mesmo que irá cadastrar o remédio ou um tutor/responsável?</h2>
+            </div>
+            <div class="buttons-modal">
+                <button onclick="cadastroNomeRemedio()">Eu mesmo</button>
+                <button>Tutor/Responsável</button>
+                <button class="close-modal">Fechar</button>
+            </div>
         </div>
         </main>
     </div>
