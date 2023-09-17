@@ -4,7 +4,7 @@
     grid-template-rows: 3rem 2fr;
     grid-template-areas: 
     'header header'
-    'left right'
+    'left left'
 }
 
 header{
@@ -12,20 +12,34 @@ header{
 }
 
 main{
-    width: 80%;
+    grid-area: left;
+    max-width: 100%;
     margin: 2.5rem auto;
 }
 
+@media(max-width: 768px) {
+    main{
+        align-items: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
 .img-medico{
-    max-width: 65%;
+    max-width: 45%;
     border-radius: 50%;
+}
+
+@media(max-width: 768px) {
+    .img-medico{
+        max-width: 30%;
+    }
 }
 
 .img-lua{
     max-width: 20%;
 }
 
-.boas-vindas{
+.title-boas-vindas{
     margin-top: 3rem;
     margin-bottom: 0.5rem; 
 }
@@ -33,7 +47,7 @@ main{
 /* Separator line */
 .separator{
     background: var(--grey-light);
-    max-width: 43%;
+    max-width: 40%;
     height: 1px;
     margin-bottom: 1rem;
 }
@@ -43,15 +57,35 @@ main{
     border-radius: 50%;
 }
 
-.section-boas-vindas{
-    display: grid;
-    grid-template-columns:20% 80%;
-    max-width: 100%;
-    margin-top: -3rem;
+.div-boas-vindas{
+    margin-left: -10rem;
 }
 
-section div{
-    max-width: 100%;
+.section-boas-vindas{
+    display: grid;
+    grid-template-columns:30% 60%;
+    margin-top: 3rem;
+}
+
+@media(max-width: 768px) {
+    .title-boas-vindas{
+        margin-top: 0rem;
+        font-size: 20px;
+    }
+    .separator{
+        max-width: 55%;
+    }
+    .img-cirurgiao{
+        display:none;
+    }
+    .div-boas-vindas{
+        margin-left: -25rem;
+    }
+    .section-boas-vindas{
+        margin-top: 6rem;
+        grid-template-columns:55% 45%;
+        font-size: 18px;
+    }
 }
 
 .section-meus-medicamentos{
@@ -64,18 +98,35 @@ section div{
 }
 
 .section-main{
-    display: grid;
+    grid-area: left;
     grid-template-columns:25% 75%;
     max-width: 100%;
     margin-top: 5.4rem;
     padding-top: 2rem;
 }
 
+@media(max-width: 768px) {
+    .section-main{
+        grid-template-columns:100%;
+        text-align: center;
+    }
+    .section-main button{
+        margin: 0 auto;
+    }
+}
+
 .section-remedios{
     display: grid;
-    grid-template-columns:49% 49%;
-    max-width: 100%;
+    grid-template-columns:50% 50%;
+
 }
+
+@media(max-width: 768px) {
+    .section-remedios{
+        grid-template-columns:65%;
+    }
+}
+
 
 .div-detalhe-remedio{
     display: grid;
@@ -90,6 +141,7 @@ section div{
     box-shadow: 3px 3px 2px var(--grey-blue);
 }
 
+
 .img-calendario{
     margin-top: .7rem;
     max-width: 75%;
@@ -102,7 +154,7 @@ section div{
 
 .p-detalhe-remedio{
     color: var(--grey-dark);
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 .div-detalhe-remedio:hover{
@@ -113,9 +165,9 @@ section div{
     background: url(../imagens/lixeira.png) no-repeat top/contain;
     background-position-x: 0rem;
     max-width: 50%;
-    margin-left: 1.2rem;
-    margin-bottom: -1.8rem;
-    margin-top: 8%;
+    margin-left: 1.8rem;
+    margin-bottom: -1rem;
+    margin-top: 3%;
     border: none;
 }
 
@@ -123,9 +175,9 @@ section div{
     background: url(../imagens/editar.png) no-repeat top/contain;
     background-position-x: 0rem;
     max-width: 50%;
-    margin-left: 1.4rem;
-    margin-bottom: -1.8rem;
-    margin-top: 8%;
+    margin-left: 1.8rem;
+    margin-bottom: -1rem;
+    margin-top: 3%;
     border: none;
 }
 
@@ -141,9 +193,10 @@ section div{
 }
 
 .div-button-remedio p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--grey-dark);
-}
+}   
+
 
 .h2-nome-remedio{
     font-size: 2rem;
@@ -155,11 +208,6 @@ h3{
     font-size: clamp(16px, 5vw, 2.3rem);
 }
 
-main{
-    display: flex;
-    align-items: center;
-}
-
 main .container{
-    width: min(80rem, 100%);
+    max-width: 100rem;
 }

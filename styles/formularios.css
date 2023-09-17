@@ -8,42 +8,72 @@
     'left right'
 }
 
+@media(max-width: 768px) {
+    .content{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 11.4rem 1fr;
+    
+        grid-template-areas: 
+        'header header'
+        'center center'
+    }
+}
+
 header{
     grid-area: header;
 }
 
-#bg{
+#bg-cadastro-idoso{
     grid-area: left;
     background: url(../imagens/medicamento.svg) no-repeat top/contain;
     background-position-x: 0rem;
     width: min(32.3rem, 75%);
 }
 
-#bg-cadastro{
+#bg-cadastro-remedio{
     grid-area: left;
     background: url(../imagens/ferramentas-medicas.svg) no-repeat top/contain;
     background-position-x: 0rem;
     width: min(32.3rem, 75%);
 }
 
+@media(max-width: 768px) {
+    #bg-cadastro-idoso{
+        display: none;
+    }
+    
+    #bg-cadastro-remedio{
+        display: none;
+    }
+}
+
 main{
     grid-area: right;
     display: flex;
-    margin-top: -2rem;
+    margin-top: -3rem;
+}
+
+@media(max-width: 768px) {
+    main{
+        grid-area: center;
+        margin: 0 auto;
+        max-width: 85%;
+    }
 }
 
 main .container{
     width: min(36.3rem, 100%);
 }
 
-section img{
-    max-width: 50%;
+@media(max-width: 768px) {
+    main .container{
+        margin: 0 auto;
+    }
 }
 
-#qnt-remedio{
-    max-width: 7.5rem;
-    padding: rem;
-    margin-right: 1rem;
+section img{
+    max-width: 50%;
 }
 
 select{
@@ -69,37 +99,9 @@ span{
     margin-right: 0.5rem;
 }
 
-.div-tipo-remedio{
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+.labels-formulario{
+    display:block;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.div-tipo-remedio > label{
-    width: 100%;
-}
-
-.section-tipo-refeicao{
-    width: 30rem;
-}
-
-#dia-hora-remedio{
-    width: 14rem;
-    margin-right: 1rem;
-}
-
-#dia-remedio{
-    width: 15rem;
-}
-
-#adicionar-dia{
-    margin-bottom: 6rem;
-    background-color: var(--red-light);
-    border-color: var(--red-light);
 }
 
 .section-etapa{

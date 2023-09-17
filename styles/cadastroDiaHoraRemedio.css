@@ -1,0 +1,49 @@
+#dia-hora-remedio{
+    width: 14rem;
+    margin-right: 1rem;
+}
+
+#dia-remedio{
+    width: 15rem;
+}
+
+@media(max-width: 768px) {
+    #dia-hora-remedio{
+        width: 30rem;
+        margin-right: none;
+        margin-bottom: 1rem;
+    }
+}
+
+#adicionar-dia{
+    margin-bottom: 6rem;
+    background-color: var(--red-light);
+    border-color: var(--red-light);
+}
+
+
+@media(max-width: 768px) {
+    #dia-remedio{
+        width: 30rem;
+    }
+}
+
+.div-tipo-remedio{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media(max-width: 768px) {
+    .div-tipo-remedio{
+        display: block;
+    }
+}
+
+.div-tipo-remedio > label{
+    width: 100%;
+}

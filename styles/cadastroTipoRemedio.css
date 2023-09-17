@@ -1,0 +1,39 @@
+#qnt-remedio{
+    width: 7.5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+@media(max-width: 768px) {
+    #qnt-remedio{
+        width: 30rem;
+        margin-right: none;
+        margin-bottom: 1rem;
+    }
+    #tipo-remedio{
+        width: 30rem;
+    }
+}
+
+.select-tipo-refeicao{
+    width: 30rem;
+}
+
+.div-tipo-remedio{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media(max-width: 768px) {
+    .div-tipo-remedio{
+        display: block;
+    }
+}
+.div-tipo-remedio > label{
+    width: 100%;
+}
