@@ -40,8 +40,10 @@ a{
 
 body, button, input, textarea{
     /*Intervalo de tamanho = no menor tamanho 14px, padrão 1.6rem, maior 2vw */
+    
     font-size: clamp(16px, 1.6rem, 2vw);
     font-family: 'Open Sans', sans-serif;
+
     /*font-family: 'Poppins', sans-serif;*/
 }
 .content{
