@@ -14,19 +14,18 @@ body, button, input, textarea {
     display: flex;
     padding: auto;
 }
+ ::placeholder{
+    color:#94A4AF;
+ }
 
-.gender-input {
-    display: block;
-    
-    margin-top: 4px;
-    
-}
-
-.gender-input label {
-    display: block;
-    align-items: center;
-    margin-top: -15px;
-    padding: 0;
+label {
+    width: 63px;
+    height: 27px;
+    top: 339px;
+    left: 720px;
+    font-weight: 600;
+    size: 18px;
+    line-height: 27px;
 }
 
 
@@ -49,9 +48,9 @@ body, button, input, textarea {
 
 #bg-cadastro{
     grid-area: left;
-    background: url(../imagens/ferramentas-medicas.svg) no-repeat top/contain;
+    background: url(../imagens/medicamento.svg) no-repeat top/contain;
     background-position-x: 0rem;
-    width: min(40.3rem, 75%);
+    width: min(75.3rem, 100%);
 }
 
 

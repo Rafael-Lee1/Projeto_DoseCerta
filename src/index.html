@@ -5,31 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ICONE NAVEGADOR -->
+    <link rel="icon" type="imagem/png" href="../imagens/pilula.png"/>
+
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/formularios.css">
+    <link rel="stylesheet" href="../styles/medicamentos.css">
+    <link rel="stylesheet" href="../styles/modal.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-    <title>Index</title>
+    <!-- JAVASCRIT -->
+    <script src="../js/index.js"></script>
+
+    <title>Dose Certa</title>
 </head>
 <body>
-    <body>
-        <div id="home" class="content">
+    <div class="content">
         <header>
             <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
         </header>
-    
-        <div id="bg">
             <div class="ball top"></div>
             <div class="ball bottom"></div>
-        </div>
-    
         <main>
             <div class="container">
+            <section class="section-boas-vindas">
+                <img  class="img-medico" src="../imagens/medico.png" alt="Imagem Médico"/>
+                <div>
+                    <h3 class="boas-vindas">Olá, Maria</h3>
+                    <div class="separator">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <p>Como você está se sentindo hoje?</p>
+                </div>
+            </section>
+            <section class="section-meus-medicamentos">
+                <div>
+                    <h3>Meus remédios</h3>
+                    <p>Dia 26, sábado de Agosto de 2023</p>
+                </div>
+            </section>
+            <section class="section-remedios">
+                <div class="div-detalhe-remedio">
+                    <div>
+                        <img  class="img-calendario" src="../imagens/calendariosol.png" alt="Imagem Calendário com sol"/>
+                        <p class="p-horario">09:00</p>
+                    </div>
+                    <div>
+                        <h3 class="h2-nome-remedio">Omeprazol</h3>
+                        <p class="p-detalhe-remedio">1 comprimido ao dia</p>
+                        <p class="p-detalhe-remedio">Depois da refeição</p>
+                    </div>
+                    <div class="div-button-remedio">
+                        <button class="button-editar" onclick="editarBotao(this)"></button>
+                        <p>Editar</p>
+                    </div>
+                    <div class="div-button-remedio">
+                        <button class="button-lixeira" type="submit" onclick="excluirBotao(this)"></button>
+                        <p>Excluir</p>
+                    </div>
+                </div>
+                <div class="div-detalhe-remedio">
+                    <div>
+                        <img  class="img-calendario" src="../imagens/calendariosol.png" alt="Imagem Calendário com sol"/>
+                        <p class="p-horario">09:00</p>
+                    </div>
+                    <div>
+                        <h3 class="h2-nome-remedio">Omeprazol</h3>
+                        <p class="p-detalhe-remedio">1 comprimido ao dia</p>
+                        <p class="p-detalhe-remedio">Depois da refeição</p>
+                    </div>
+                    <div class="div-button-remedio">
+                        <a href="./cadastroNomeRemedio.html"><button class="button-editar" onclick="editarBotao(this)" type="submit"></button></a>
+                        <p>Editar</p>
+                    </div>
+                    <div class="div-button-remedio">
+                        <button class="button-lixeira" type="submit" onclick="excluirBotao(this)"></button>
+                        <p>Excluir</p>
+                    </div>
+                </div>
+                <div class="div-detalhe-remedio">
+                    <div>
+                        <img  class="img-calendario" src="../imagens/calendariosol.png" alt="Imagem Calendário com sol"/>
+                        <p class="p-horario">09:00</p>
+                    </div>
+                    <div>
+                        <h3 class="h2-nome-remedio">Omeprazol</h3>
+                        <p class="p-detalhe-remedio">1 comprimido ao dia</p>
+                        <p class="p-detalhe-remedio">Depois da refeição</p>
+                    </div>
+                    <div class="div-button-remedio">
+                        <a href="./cadastroNomeRemedio.html"><button class="button-editar" onclick="editarBotao(this)" type="submit"></button></a>
+                        <p>Editar</p>
+                    </div>
+                    <div class="div-button-remedio">
+                        <button class="button-lixeira" type="submit" onclick="excluirBotao(this)"></button>
+                        <p>Excluir</p>
+                    </div>
+                </div>
+            </section>
+            <button class="open-modal">Adicionar remédios</button>
+        </div>
+        <!-- MODAL -->
+        <div id="fade" class="hide">
+        </div>
+        <div id="modal" class="hide">
+            <div class="modal-body">
+                <img class="img-medica-modal" src="../imagens/medica.png"/>
+                <h2>Será você mesmo que irá cadastrar o remédio ou um tutor/responsável?</h2>
             </div>
+            <div class="buttons-modal">
+                <button onclick="cadastroNomeRemedio()">Eu mesmo</button>
+                <button>Tutor/Responsável</button>
+                <button class="close-modal">Fechar</button>
+            </div>
+        </div>
         </main>
     </div>
 </body>
