@@ -1,3 +1,7 @@
+/* Import da font utilizada no projeto */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap');
+
+/* Retira estilos padrão do navegador */
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/* Definição das cores e tamanho da fonte */
 html{
     --black: #0D114F;
     --white-input: #F5F5F5;
@@ -25,32 +30,36 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
+/* Estilos body */
 body{
     display:flex;
     height: 100vh;
     background: var(--backgroud);
 }
  
+/* Remoção estilo de links */
 a{
     text-decoration:none;
     color: inherit;
 }
 
-body, button, input, textarea{
-    /*Intervalo de tamanho = no menor tamanho 14px, padrão 1.6rem, maior 2vw */
+/* Font size e font family das páginas */
+body, button, input, p{
+    /*Intervalo de tamanho = no menor tamanho 18px, padrão 1.6rem, maior 2vw */
     
-    font-size: clamp(16px, 1.6rem, 2vw);
+    font-size: clamp(18px, 1.6rem, 2vw);
     font-family: 'Open Sans', sans-serif;
 
     /*font-family: 'Poppins', sans-serif;*/
 }
+
+/* Tamanho e centralização content */
 .content{
     width: 100%;
     margin: 0 auto;
 }
 
 /* Header */
-
 .content header{
     width: 80%;
     margin: 2.5rem auto;
@@ -59,7 +68,7 @@ body, button, input, textarea{
     width: 25.5rem;
 }
 
-/* Create Balls */
+/* Criação dos semi circulos do background */
 .ball{
     width: 21.2rem;
     height: 21.2rem;
@@ -82,13 +91,15 @@ body, button, input, textarea{
     bottom: -15rem;
 }
 
+/* Estilos labels, títulos e parágrafos */
 label {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: var(--grey-dark);
 
 }
-main h2{
+
+h2{
     font-family: 'Poppins', sans-serif;
     color: var(--black);
     margin-bottom: 2rem;
@@ -99,6 +110,7 @@ main p{
     color: var(--grey-light);
 }
 
+/* Estilos inputs e buttons */
 input, button, .button{
     border-radius: .8rem;
     border-color: var(--blue);
@@ -112,6 +124,7 @@ input{
     background: var(--white-input);
 }
 
+/* Estilos botões */
 button, .button{
     font-family:'Poppins', sans-serif;
 
@@ -131,6 +144,7 @@ button:hover, .button:hover{
     filter: brightness(1.2)
 }
 
+/* Botão sem cor */
 button.grey:hover{
     background: var(--grey-blue);
 }

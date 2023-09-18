@@ -5,61 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ICONE NAVEGADOR -->
+    <link rel="icon" type="imagem/png" href="../imagens/pilula.png"/>
+
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/formularios.css">
     <link rel="stylesheet" href="../styles/login.css">
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-
-    <title>Login</title>
+    <title>Dose Certa - Login</title>
 </head>
 
-<!-- Inicio Conteudo -->
 <body>
-
-    <div id="home" class="content">
+    <div class="content">
         <header>
             <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
         </header>
-    
-        <div id="bg-cadastro">
-            <div class="ball top"></div>
-            <div class="ball bottom"></div>
-        </div>
-    
+
+         <!-- Imagem lateral e semi círculos do background -->
+        <div id="bg-cadastro-idoso"></div>
+        <div class="ball top"></div>
+        <div class="ball bottom"></div>
+
         <main>
             <div class="container">
-                <selection>
-                    <h2>Entre na sua conta</h2>
+                <!-- Sessão com o formulário -->
+                <section>
                     <form>
-                        <div class="input-gp">
-                        <div class="input-box">
-                            <label class="label-email" for="email">E-MAIL</label>
-                            <input class="input-email" type="email" id="email" placeholder="Seu e-mail" autocomplete="off">
-                        </div>
-
-                        <div class="input-box">
-                            <label class="label-password" for="password">SENHA</label>
-                            <input class="input-password" type="password" id="password" placeholder="Sua senha">
-                        </div>
-                        <!-- Redireciona para a pagina Home Sem Medicamento -->
-                        <button type="submit"><a href="./homeSemMedicamento.html">Entrar na Conta</a></button>
-                        
-                        <!-- Redireciona para a pagina Esqueceu a Senha -->    
-                        <a href="./EsqueceuSenha.html" class="texto-link">ESQUECEU A SENHA?</a>
-
-                        <h2 class="criar-conta">Crie sua conta</h2>
-
-                        <!-- Botão Criar Conta -->
-                        <a href="./cadastroIdoso.html"><button class="grey">Criar Conta</a></button>
+                        <fieldset>
+                            <legend>Dados de e-mail e senha para entrar na sua conta</legend>
+                            <h2>Entre na sua conta</h2>
+                            <div>
+                                <label for="email">E-MAIL:<abbr title="Campo obrigatório">*</abbr></label>
+                                <input type="email" id="email" placeholder="Ex.: joao@hotmail.com" autocomplete="off">
+                            </div>
+                            <div>
+                                <label class="labels-formulario" for="password">SENHA:<abbr title="Campo obrigatório">*</abbr></label>
+                                <input type="password" id="password" placeholder="Ex.: 123joao">
+                            </div>
+                            <!-- Redireciona para a página index -->
+                            <button type="submit"><a href="./index.html">Entrar na conta</a></button>
+                            
+                            <!-- Redireciona para a pagina Esqueceu a Senha --> 
+                            <div class="link-esqueceu-senha"> 
+                                <a href="./esqueceuSenha.html">ESQUECEU A SENHA?</a>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Link para criação da conta</legend>
+                            <h2>Crie sua conta</h2>
+                            <a href="./cadastroIdoso.html"><button class="grey">Criar Conta</a></button>
+                        </fieldset>
                     </form>
-                </selection>
+                </section>
             </div>
         </main>
     </div> 
-       
 </body>
 </html>

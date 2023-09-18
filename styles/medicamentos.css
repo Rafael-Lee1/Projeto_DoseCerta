@@ -1,82 +1,105 @@
+/* Content com apenas uma coluna */
 .content{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 3rem 2fr;
     grid-template-areas: 
     'header header'
-    'left right'
+    'left left'
 }
 
 header{
     grid-area: header;
 }
-
+/* Tamanho e alinhamento da main */
 main{
-    width: 80%;
+    max-width: 100%;
     margin: 2.5rem auto;
 }
 
+@media(max-width: 768px) {
+    main{
+        align-items: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+/* Imagem do médico da sessão de boas vindas */
 .img-medico{
-    max-width: 65%;
+    max-width: 45%;
     border-radius: 50%;
 }
 
-.img-lua{
-    max-width: 20%;
+@media(max-width: 768px) {
+    .img-medico{
+        max-width: 70%;
+    }
 }
 
-.boas-vindas{
+/*Estilos do "Olá Maria" */
+.title-boas-vindas{
     margin-top: 3rem;
     margin-bottom: 0.5rem; 
 }
 
-/* Separator line */
+/* Linha que separa o "Olá Mária" do "Como você está se sentindo..."*/
 .separator{
     background: var(--grey-light);
-    max-width: 43%;
+    max-width: 40%;
     height: 1px;
     margin-bottom: 1rem;
 }
-
-.img-cirurgiao{
-    max-width: 100%;
-    border-radius: 50%;
+/* Espaçamento entre a imagem do médico e do texto de boas vindas */
+.div-boas-vindas{
+    margin-left: -10rem;
 }
-
+/* Divisão da sessão de boas vindas com a imagem do médico e "Olá, Maria" */
 .section-boas-vindas{
     display: grid;
-    grid-template-columns:20% 80%;
-    max-width: 100%;
-    margin-top: -3rem;
+    grid-template-columns:30% 60%;
+    margin-top: 3rem;
 }
 
-section div{
-    max-width: 100%;
+/* Modificação das estilizações de acordo com o tamanho da tela */
+@media(max-width: 768px) {
+    .title-boas-vindas{
+        margin-top: 0rem;
+        font-size: 20px;
+    }
+    .separator{
+        max-width: 26rem;
+    }
+    .div-boas-vindas{
+        margin-left: -2rem;
+    }
+    .section-boas-vindas{
+        margin-top: 6rem;
+        grid-template-columns:15rem 25rem;
+        font-size: 18px;
+    }
 }
-
+/* Margem da div que contém os medicamentos cadastrados */
 .section-meus-medicamentos{
     margin-top: 2rem;
 }
-
+/* Paragráfo da div que contém os medicamentos cadastrados */
 .section-meus-medicamentos p{
     color: var(--blue);
     margin-top: -0.8rem;
 }
 
-.section-main{
-    display: grid;
-    grid-template-columns:25% 75%;
-    max-width: 100%;
-    margin-top: 5.4rem;
-    padding-top: 2rem;
-}
-
+/* Section que divide os cards de medicamentos em duas colunas */
 .section-remedios{
     display: grid;
-    grid-template-columns:49% 49%;
-    max-width: 100%;
+    grid-template-columns:50% 50%;
 }
 
+@media(max-width: 768px) {
+    .section-remedios{
+        grid-template-columns:40rem;
+    }
+}
+/* Estilos da div com a divisão dos elementos dentro do card de remédios*/
 .div-detalhe-remedio{
     display: grid;
     max-width: 100%;
@@ -89,43 +112,43 @@ section div{
     border: 1.5px solid var(--blue);
     box-shadow: 3px 3px 2px var(--grey-blue);
 }
-
+/* Define tamanho e margem da imagem de lua ou sol */
 .img-calendario{
     margin-top: .7rem;
     max-width: 75%;
 }
-
+/* Estilo de como o horário aparece */
 .p-horario{
     color: var(--black);
     font-weight: 700;
 }
-
+/* Estilo do texto abaixo do nome do remedio dentro do card de remédio*/
 .p-detalhe-remedio{
     color: var(--grey-dark);
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
-
+/* Efeito ao passar mouse no card de remédio*/
 .div-detalhe-remedio:hover{
     filter: brightness(1.1)
 }
-
+/* Estilo e tamanho botão lixeira*/
 .button-lixeira{    
     background: url(../imagens/lixeira.png) no-repeat top/contain;
     background-position-x: 0rem;
     max-width: 50%;
-    margin-left: 1.2rem;
-    margin-bottom: -1.8rem;
-    margin-top: 8%;
+    margin-left: 1.8rem;
+    margin-bottom: -1rem;
+    margin-top: 3%;
     border: none;
 }
-
+/* Estilo e tamanho botão editar*/
 .button-editar{    
     background: url(../imagens/editar.png) no-repeat top/contain;
     background-position-x: 0rem;
     max-width: 50%;
-    margin-left: 1.4rem;
-    margin-bottom: -1.8rem;
-    margin-top: 8%;
+    margin-left: 1.8rem;
+    margin-bottom: -1rem;
+    margin-top: 3%;
     border: none;
 }
 
@@ -134,32 +157,51 @@ section div{
     text-align: center;
     align-items: center;
 }
-
-
+/* Diminui lixeira e editar ao passar o mouse*/
 .div-button-remedio:hover{
     width: 98%;
 }
-
+/* Estilo texto abaixo dos botões editar e lixeira*/
 .div-button-remedio p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--grey-dark);
-}
-
-.h2-nome-remedio{
-    font-size: 2rem;
-}
-
+}   
+/* Estilo do campo nome do remédio*/
 h3{
     font-family: 'Poppins', sans-serif;
     color: var(--black);
     font-size: clamp(16px, 5vw, 2.3rem);
 }
-
-main{
-    display: flex;
+/* Estilo do campo nome do remédio*/
+main .container{
+    max-width: 100rem;
+}
+/* Sessão que contem médica e texto de adicionar medicamentos */
+.section-main{
+    display: grid;
+    grid-template-columns:25% 75%;
+    max-width: 100%;
+    margin-top: 5.4rem;
+    padding-top: 2rem;
     align-items: center;
 }
 
-main .container{
-    width: min(80rem, 100%);
+@media(max-width: 768px) {
+    .section-main{
+        grid-template-columns:35rem;
+        text-align: center;
+    }
+    .section-main button{
+        margin: 0 auto;
+    }
+}
+/* Imagem da médica quando não tem remédio cadastrado */
+.img-cirurgiao{
+    max-width: 80%;
+    border-radius: 50%;
+}
+@media(max-width: 768px) {
+    .img-cirurgiao{
+        display:none;
+    }
 }

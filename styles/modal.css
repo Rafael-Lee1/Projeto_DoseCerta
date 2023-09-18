@@ -1,8 +1,5 @@
-  #open-modal {
-    background-color: #007bff;
-  }
-  
-  #fade {
+/* Estilização com fundo escuro */
+#fade {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,24 +8,34 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 5;
   }
-
-  .modal-body{
-    padding: 1rem;
-    display: flex;
-  }
-
+/* Tamanho do body do modal */
+.modal-body{
+  padding: 1rem;
+  display: flex;
+}
+/* Tamanho do texto dentro do modal */
+.modal-body h2{
+  margin-top: 3rem;
+  text-align: center;
+}
+@media(max-width: 768px) {
   .modal-body h2{
-    margin-top: 3rem;
-    text-align: center;
+    font-size: 25px;
   }
-
-  .img-medica-modal{
+} 
+/* Tamanho e borda da imagem da médica no modal */
+.img-medica-modal{
     max-width: 22%;
     border-radius: 8rem;
     border: 1px solid var(--blue);
   }
-  
-  #modal {
+@media(max-width: 768px) {
+  .img-medica-modal{
+    display: none;
+  }
+} 
+/* Posicionamento do modal na tela*/
+#modal {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -40,36 +47,49 @@
     border-radius: 0.5rem;
     border: 3px solid var(--blue);
     z-index: 10;
-  }
+}
+/* Efeitos de transição do modal na hora de abrir*/
+#fade,
+#modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+  /* Efeitos de transição do modal na hora de fechar*/
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
   
-  #fade,
-  #modal {
-    transition: 0.5s;
-    opacity: 1;
-    pointer-events: all;
-  }
-  
-  #modal.hide,
-  #fade.hide {
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  #modal.hide {
-    top: 0;
-  }
-
+#modal.hide {
+  top: 0;
+}
+/* Estilos dos botões do modal*/
+.buttons-modal{
+  display: flex;
+}
+/* Estilos dos botões do modal de acordo com tamanho de tela*/
+@media(max-width: 768px) {
   .buttons-modal{
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+}
 
-  .buttons-modal button{
-    margin-left: 1rem;
-  }
-
-  .close-modal{
-    width:10%;
-    background-color: var(--red);
-    border: none;
-  }
+.buttons-modal button{
+  margin-left: 1rem;
+}
+/* Estilo botão fechar*/
+.close-modal{
+  width:10%;
+  background-color: var(--red);
+  border: none;
+}
+/* Estilo botão fechar de acordo com tamanho de tela*/
+@media(max-width: 768px) {
+    .close-modal{
+      width: 30.5rem;
+    }
+}
 

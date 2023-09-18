@@ -61,7 +61,7 @@ Descubra o Dose Certa e facilite o controle dos seus medicamentos diários. Orga
 
 | ![Image 1](https://avatars.githubusercontent.com/u/115593138?s=400&u=c345c56a9a6c0718f52a868dc3f39fd8bdbc944d&v=4) | ![Image 2](https://avatars.githubusercontent.com/u/81046850?v=4) | ![Image 3](https://avatars.githubusercontent.com/u/108960277?v=4) | ![Image 4](https://avatars.githubusercontent.com/u/14793244?v=4) | ![Image 5](https://avatars.githubusercontent.com/u/106563124?v=4) |
 | :---: | :---: | :---: | :---: | :---: |
-| [Rafael Santos](https://github.com/Rafael-Lee1) | [Luana Gruber](https://github.com/luana-gruber) | [Robson Dionisio](https://github.com/robsondionisio) | [André Bezerra](https://github.com/w1s4sh1i) | [Wander M P Nóbrega](https://github.com/WMatheus2022) |
+| [Rafael Santos](https://github.com/Rafael-Lee1) | [Luana Gruber](https://github.com/luana-gruber) | [Robson Dionisio](https://github.com/robsondionisio) | [Wander M P Nóbrega](https://github.com/WMatheus2022) |
 
 
 
