@@ -1,9 +1,10 @@
+/* Campo quantidade com limite de tamanho */
 #qnt-remedio{
     width: 7.5rem;
     padding: 1rem;
     margin-right: 1rem;
 }
-
+/* Campo quantidade e tipo de remédio com limite de tamanho de acordo com tamanho de tela */
 @media(max-width: 768px) {
     #qnt-remedio{
         width: 30rem;
@@ -14,11 +15,11 @@
         width: 30rem;
     }
 }
-
+/* Campo antes/depois da refeição com limite de tamanho */
 .select-tipo-refeicao{
     width: 30rem;
 }
-
+/* Estilos da div abraça todos os labels e inputs do formuláros */
 .div-tipo-remedio{
     align-items: center;
     display: flex;

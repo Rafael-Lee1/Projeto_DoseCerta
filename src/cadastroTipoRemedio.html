@@ -19,26 +19,30 @@
     <title>Dose Certa</title>
 </head>
 <body>
-    <body>
-        <div class="content">
-            <header>
-                <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
-            </header>
-        
-            <div id="bg-cadastro-remedio"></div>
-            <div class="ball top"></div>
-            <div class="ball bottom"></div>
+    <div class="content">
+        <header>
+            <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
+        </header>
+
+        <!-- Imagem lateral e semi círculos do background -->
+        <div id="bg-cadastro-remedio"></div>
+        <div class="ball top"></div>
+        <div class="ball bottom"></div>
     
         <main>
             <div class="container">
+                <!-- Sessão com botões de progresso -->
                 <section class="section-etapa">
                     <a href="./cadastroNomeRemedio.html"><button data-tooltip="Primeira etapa" class="btn-etapa-inicio btn-etapa" onclick="adicionarTipoRemedio()">1</button></a>
                     <a href="./cadastroDiaHoraRemedio.html"><button data-tooltip="Etapa anterior" class=" btn-etapa-meio btn-etapa" onclick="adicionarTipoRemedio()">2</button></a>
                     <button data-tooltip="Você está aqui! última etapa" class="btn-etapa-destaque btn-etapa-final btn-etapa">3</button>
                 </section>
                 <section>
-                    <h2>Cadastro remédio</h2>
-                        <form>
+                    <!-- Sessão com o formulário -->
+                    <form>
+                        <fieldset>
+                            <legend>Cadastro quantidade e tipo de remédio</legend>
+                            <h2>Cadastro remédio</h2>
                             <div class="div-tipo-remedio">
                                 <label for="qnt-remedio">QUANTIDADE E TIPO DO REMÉDIO: <abbr title="Campo obrigatório">*</abbr></label>
                                 <input id="qnt-remedio" type="number" name="qnt-remedio" placeholder="Ex.:1">
@@ -49,19 +53,20 @@
                                     <option value="gotas">Gotas</option>
                                 </Select>
                             </div>
-                            <div>
-                                <label for="refeicao">ANTES OU DEPOIS DA REFEIÇÃO</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Cadastro se o remédio deve ser tomado antes ou depois da refeição</legend>
                                 <div class="div-tipo-remedio">
+                                    <label for="refeicao">ANTES OU DEPOIS DA REFEIÇÃO?</label>
                                     <Select class="select-tipo-refeicao" id="refeicao" name="refeicao">
-                                        <option value="Antes da">Antes da refeição</option>
-                                        <option value="Durante a">Durante a refeição</option>
-                                        <option value="Depois da">Depois da refeição</option>
+                                        <option value="Antes da">Tomar antes da refeição</option>
+                                        <option value="Depois da">Tomar depois da refeição</option>
                                     </Select>
                                 </div>
-                            </div>
                             <a href="index.html"><button type="button" onclick="adicionarTipoRemedio()">Salvar remédio</button></a>
                             <a href="cadastroDiaHoraRemedio.html"><button type="button" class="grey" onclick="adicionarTipoRemedio()">Voltar</button></a>
-                        </form>
+                        </fieldset>
+                    </form>
                 </section>
             </div>
         </main>

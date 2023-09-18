@@ -1,5 +1,60 @@
-.adicionar-dia{
-    margin-bottom: 1rem;
-    background-color: var(--red-light);
-    border-color: var(--red-light);
+/* Campo hora com limite de tamanho */
+.dia-hora-remedio{
+    max-width: 11rem;
+}
+/* Modifica campo hora de acordo com o tamanho da tela */
+@media(max-width: 768px) {
+    .dia-hora-remedio{
+        max-width: 11rem;
+        margin-right: none;
+    }
+}
+/* Campo dia com limite de tamanho */
+.dia-remedio{
+    max-width: 14rem;
+}
+/* Campo dia com limite de tamanho de acordo com tamanho da tela*/
+@media(max-width: 768px) {
+    .dia-remedio{
+        max-width: 14rem;
+    }
+}
+/* Div que divide os elementos de hora/dia/botão adicionar novo*/
+.div-dia-hora-remedio{
+    display: grid;
+    align-items: center;
+    grid-template-columns:32% 40% 20%;
+}
+/* Div que divide os elementos de hora/dia/botão adicionar novo com tamanho 768*/
+@media(max-width: 768px) {
+    .div-dia-hora-remedio{
+        grid-template-columns:11.5rem 14.5rem 4rem;
+    }
+}
+
+.div-dia-hora-remedio button{
+    max-width: 4rem;
+    margin-top: 0rem;
+}
+/* Div que divide os elementos quantidade e tipo de remedio na mesma linha*/
+.div-tipo-remedio{
+    display: grid;
+    grid-template-columns:23.5% 20%;
+    align-items: center;
+}
+@media(max-width: 768px) {
+    .div-tipo-remedio{
+        grid-template-columns:8.6rem 21.5rem;
+    }
+}
+
+/* Tamanho campo quantidade de remédio*/
+#qnt-remedio{
+    width: 7.8rem;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+/* Select com as opções de antes ou depois da refeição */
+.select-tipo-refeicao{
+    width: 30rem;
 }

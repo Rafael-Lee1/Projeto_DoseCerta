@@ -76,6 +76,10 @@ function voltarPaginaPrincipal() {
   window.location.href = "index.html";
 }
 
-function cadastroNomeRemedio() {
+function cadastroRemedioIdoso() {
   window.location.href = "cadastroNomeRemedio.html"
-    };
+};
+
+function cadastroRemedioTutor() {
+    window.location.href = "cadastroRemedio.html"
+};

@@ -21,30 +21,34 @@
     
 </head>
 <body>
-    <body>
-        <div id="home" class="content">
+    <div id="home" class="content">
         <header>
             <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
         </header>
-    
+
+        <!-- Imagem lateral e semi círculos do background -->
         <div id="bg-cadastro-remedio"></div>
         <div class="ball top"></div>
         <div class="ball bottom"></div>
     
         <main>
             <div class="container">
+                <!-- Sessão com botões de progresso -->
                 <section class="section-etapa">
                     <a href="cadastroNomeRemedio.html"><button data-tooltip="Etapa anterior!" class="btn-etapa-inicio btn-etapa" onclick="adicionarDiaHoraRemedio()">1</button></a>
                     <button data-tooltip="Você está aqui!" class="btn-etapa-destaque  btn-etapa-meio btn-etapa">2</button>
                     <a href="cadastroTipoRemedio.html"><button data-tooltip="Última etapa!" class="btn-etapa-final btn-etapa" onclick="adicionarDiaHoraRemedio()">3</button></a>
                 </section>
+                <!-- Sessão do formulário -->
                 <section>
-                    <h2>Cadastro remédio</h2>
-                        <form>
+                    <form>
+                        <fieldset>
+                            <legend>Cadastro hora e dia do remédio</legend>
+                            <h2>Cadastro remédio</h2>
                             <div class="div-tipo-remedio">
                                 <label for="dia-hora-remedio">HORÁRIO E DIA DO REMÉDIO:  <abbr title="Campo obrigatório">*</abbr></label>
-                                <input type="time" id="dia-hora-remedio" name="dia-hora-remedio">
-                                <Select id="dia-remedio" name="dia-remedio">
+                                <input type="time" class="dia-hora-remedio" id="dia-hora-remedio" name="dia-hora-remedio">
+                                <Select class="dia-remedio" id="dia-remedio" name="dia-remedio">
                                     <option value="todos">Todos os dias</option>
                                     <option value="final">Final de semana</option>
                                     <option value="segsex">Segunda a sexta</option>
@@ -55,10 +59,11 @@
                                     <option value="sex">Sexta</option>
                                 </Select>
                             </div>
-                            <button id="adicionar-dia">Adicionar mais um</button>
+                            <button id="button-adicionar-dia">Adicionar horário</button>
                             <button onclick="adicionarDiaHoraRemedio()" type="button">Avançar</button>
                             <a href="cadastroNomeRemedio.html"><button type="button" class="grey">Voltar</button></a>
-                        </form>
+                    </fieldset>
+                    </form>
                 </section>
             </div>
         </main>

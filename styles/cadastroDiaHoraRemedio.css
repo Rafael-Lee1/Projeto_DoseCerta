@@ -1,33 +1,33 @@
-#dia-hora-remedio{
+/* Campo hora com limite de tamanho */
+.dia-hora-remedio{
     width: 14rem;
     margin-right: 1rem;
 }
-
-#dia-remedio{
-    width: 15rem;
-}
-
+/* Modifica campo hora de acordo com o tamanho da tela */
 @media(max-width: 768px) {
-    #dia-hora-remedio{
+    .dia-hora-remedio{
         width: 30rem;
         margin-right: none;
         margin-bottom: 1rem;
     }
 }
-
-#adicionar-dia{
+/* Campo dia com limite de tamanho */
+.dia-remedio{
+    width: 15rem;
+}
+/* Modifica campo dia de acordo com o tamanho da tela */
+@media(max-width: 768px) {
+    .dia-remedio{
+        width: 30rem;
+    }
+}
+/* Botão vermelho para adicionar mais um dia e horário */
+#button-adicionar-dia{
     margin-bottom: 6rem;
     background-color: var(--red-light);
     border-color: var(--red-light);
 }
-
-
-@media(max-width: 768px) {
-    #dia-remedio{
-        width: 30rem;
-    }
-}
-
+/* Div que faz o campo horário e dia ficarem um ao lado do outro alinhados */
 .div-tipo-remedio{
     align-items: center;
     display: flex;
@@ -37,7 +37,7 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-
+/* Modifica div para ter apenas um elemento por linha de acordo com o tamanho da tela */
 @media(max-width: 768px) {
     .div-tipo-remedio{
         display: block;

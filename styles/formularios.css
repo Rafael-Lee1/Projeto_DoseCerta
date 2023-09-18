@@ -1,3 +1,4 @@
+/* Divisão da página por grid com duas colunas*/
 .content{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -8,6 +9,7 @@
     'left right'
 }
 
+/* Alteração das colunas para 1 quando a tela for menor que 768px */
 @media(max-width: 768px) {
     .content{
         display: grid;
@@ -24,6 +26,7 @@ header{
     grid-area: header;
 }
 
+/* Imagens de backgroud */
 #bg-cadastro-idoso{
     grid-area: left;
     background: url(../imagens/medicamento.svg) no-repeat top/contain;
@@ -38,6 +41,7 @@ header{
     width: min(32.3rem, 75%);
 }
 
+/* Retirada das imagens quando a tela for menor que 768 */
 @media(max-width: 768px) {
     #bg-cadastro-idoso{
         display: none;
@@ -48,12 +52,14 @@ header{
     }
 }
 
+/* Configurações de posição da main */
 main{
     grid-area: right;
     display: flex;
-    margin-top: -3rem;
+    margin-top: -4rem;
 }
 
+/* Configurações de posição da main com tela menor que 768px */
 @media(max-width: 768px) {
     main{
         grid-area: center;
@@ -62,6 +68,7 @@ main{
     }
 }
 
+/* Configurações de tamanho da classe de container */
 main .container{
     width: min(36.3rem, 100%);
 }
@@ -72,10 +79,16 @@ main .container{
     }
 }
 
+/* Tamanho da imagem dentros das sessões */
 section img{
     max-width: 50%;
 }
+/* Deixar legenda dos agrupamentos invisivel */
+legend{
+    display: none;
+}
 
+/* Configurações para inputs do tipo select */
 select{
     background: var(--white-input);
     border-radius: .8rem;
@@ -88,11 +101,13 @@ select{
     color: var(--black);
 }
 
+/* Configurações para inputs do tipo option */
 option{
     font-family: 'Poppins', bold;
     color: var(--black);
 }
 
+/* Configurações para span */
 span{
     font-family: 'Poppins', bold;
     color: var(--grey-dark);
@@ -104,6 +119,7 @@ span{
     margin-top: 1rem;
 }
 
+/* Botões de progresso */
 .section-etapa{
     display: flex;
 }

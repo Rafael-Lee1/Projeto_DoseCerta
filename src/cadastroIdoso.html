@@ -21,34 +21,39 @@
         <header>
             <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
         </header>
-    
+
+        <!-- Imagem lateral e semi círculos do background -->
         <div id="bg-cadastro-idoso"></div>
         <div class="ball top"></div>
         <div class="ball bottom"></div>
      
     <main>
         <div class="container">
+            <!-- Sessão do formulário -->
             <section>
-                <h2>Crie sua conta</h2>
-                <form action="">
-                    <div>
-                        <label for="fullname" class="labels-formulario">NOME: <abbr title="Campo obrigatório">*</abbr></label>
-                        <input id="fullname" type="text" name="fullname" placeholder="Ex: Wander Oliveira" required>
-                    </div>
-                    <div>
-                        <label for="e-mail" class="labels-formulario">E-MAIL: <abbr title="Campo obrigatório">*</abbr></label>
-                        <input id="e-mail" type="email" name="e-mail" placeholder="Ex: nome@gmail.com" required>
-                    </div>
-                    <div>
-                        <label for="number" class="labels-formulario">TELEFONE: <abbr title="Campo obrigatório">*</abbr></label>
-                        <input id="number" type="tel" name="number" placeholder="Ex: +55 99999-5555" required>
-                    </div>
-                    <div>
-                        <label for="password" class="labels-formulario">SENHA: <abbr title="Campo obrigatório">*</abbr></label>
-                        <input id="password" type="text" name="password" placeholder="EX: @ck1514654" required>
-                    </div>
-                    <button ><a href="#">Criar conta</a></button>
-                    <button class="grey"><a href="./src/login.html">Voltar</a></button>
+                <form>
+                    <fieldset>
+                        <legend>Cadastro dados pessoais</legend>
+                        <h2>Crie sua conta</h2>
+                        <div>
+                            <label for="fullname" class="labels-formulario">NOME: <abbr title="Campo obrigatório">*</abbr></label>
+                            <input id="fullname" type="text" name="fullname" placeholder="Ex.: Wander Oliveira" >
+                        </div>
+                        <div>
+                            <label for="e-mail" class="labels-formulario">E-MAIL: <abbr title="Campo obrigatório">*</abbr></label>
+                            <input id="e-mail" type="email" name="e-mail" placeholder="Ex.: nome@gmail.com" >
+                        </div>
+                        <div>
+                            <label for="number" class="labels-formulario">TELEFONE: <abbr title="Campo obrigatório">*</abbr></label>
+                            <input id="number" type="tel" name="number" placeholder="Ex.: +55 99999-5555" >
+                        </div>
+                        <div>
+                            <label for="password" class="labels-formulario">SENHA: <abbr title="Campo obrigatório">*</abbr></label>
+                            <input id="password" type="text" name="password" placeholder="Ex.: @ck1514654">
+                        </div>
+                        <button><a href="./login.html">Criar conta</a></button>
+                        <button class="grey"><a href="./login.html">Voltar</a></button>
+                </fieldset>
                 </form>
             </section>
         </div>

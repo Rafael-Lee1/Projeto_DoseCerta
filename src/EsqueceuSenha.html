@@ -21,21 +21,26 @@
             <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
         </header>
 
+         <!-- Imagem lateral e semi círculos do background -->
         <div id="bg-cadastro-idoso"></div>
         <div class="ball top"></div>
         <div class="ball bottom"></div>
 
         <main>
             <div class="container">
+                <!-- Sessão com o formulário -->
                 <section>
-                    <h2>Esqueceu sua senha?</h2>
-                    <form action="">
-                        <div class="labels-formularios">
-                            <label for="e-mail">DIGITE SEU E-MAIL <abbr title="Campo obrigatório">*</abbr></label>
-                            <input type="e-mail" name="text" placeholder="Ex: name@gmail.com" required>
-                        </div>
-                        <button ><a href="/src/homeSemMedicamento.html">Continuar</a></button>
-                        <button class="grey"><a href="/src/login.html">Voltar</a></button>
+                    <form>
+                        <fieldset>
+                            <legend>E-mail para recuperação de senha</legend>
+                            <h2>Esqueceu sua senha?</h2>
+                            <div class="labels-formularios">
+                                <label for="e-mail">DIGITE SEU E-MAIL: <abbr title="Campo obrigatório">*</abbr></label>
+                                <input type="e-mail" name="text" placeholder="Ex: name@gmail.com">
+                            </div>
+                            <button><a href="index.html">Continuar</a></button>
+                            <button class="grey"><a href="login.html">Voltar</a></button>
+                    </fieldset>
                     </form>
                 </section>
             </div>

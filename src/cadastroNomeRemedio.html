@@ -18,33 +18,36 @@
     <title>Dose Certa</title>
 </head>
 <body>
-    <body>
-        <div id="home" class="content">
+    <div class="content">
         <header>
             <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
         </header>
     
+        <!-- Imagem lateral e semi círculos do background -->
         <div id="bg-cadastro-remedio"></div>
         <div class="ball top"></div>
         <div class="ball bottom"></div>
     
         <main>
             <div class="container">
+                <!-- Sessão com botões de progresso -->
                 <section class="section-etapa">
                     <button data-tooltip="Você está aqui!" class="btn-etapa-destaque btn-etapa-inicio btn-etapa">1</button>
                     <a href="cadastroDiaHoraRemedio.html"><button data-tooltip="Próxima etapa!"class="btn-etapa-meio btn-etapa" onclick="adicionarNomeRemedio()">2</button></a>
                     <a href="cadastroTipoRemedio.html"><button data-tooltip="Etapa final!"class="btn-etapa-final btn-etapa" onclick="adicionarNomeRemedio()">3</button></a>
                 </section>
+                <!-- Sessão com o formulário -->
                 <section>
-                    <h2>Cadastro remédio</h2>
-                        <form onsubmit="return false;">
-                            <div class="labels-formulario">
+                    <form onsubmit="return false;">
+                        <fieldset>
+                            <legend>Cadastro nome do remédio</legend>
+                                <h2>Cadastro remédio</h2>
                                 <label for="nome-remedio">NOME DO REMÉDIO: <abbr title="Campo obrigatório">*</abbr></label>
                                 <input type="text" id="nome-remedio" name="nome-remedio"  placeholder="Ex.: Omeprazol">
-                            </div>
-                            <button onclick="adicionarNomeRemedio()">Avançar</button>
-                            <a href="index.html"><button type="button" class="grey">Voltar</button></a>
-                        </form>
+                                <button onclick="adicionarNomeRemedio()">Avançar</button>
+                                <a href="index.html"><button type="button" class="grey">Voltar</button></a>
+                        </fieldset>
+                    </form>
                 </section>
             </div>
         </main>

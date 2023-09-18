@@ -23,21 +23,22 @@
         <header>
             <img src="../imagens/logo.svg" alt="Dose Certa Logo"/>
         </header>
+
+            <!-- Semi círculos do background -->
             <div class="ball top"></div>
             <div class="ball bottom"></div>
         <main>
             <div class="container">
+            <!-- Sessão inicial de boas vindas com imagem do médico e cumprimento -->
             <section class="section-boas-vindas">
                 <img  class="img-medico" src="../imagens/medico.png" alt="Imagem Médico"/>
                 <div class="div-boas-vindas">
                     <h3 class="title-boas-vindas">Olá, Maria</h3>
-                    <div class="separator">
-                        <div></div>
-                        <div></div>
-                    </div>
+                    <div class="separator"></div>
                     <p>Como você está se sentindo hoje?</p>
                 </div>
-                </section>
+            </section>
+            <!-- Sessão do cabeçalho dos remédios com a data -->
             </section>
             <section class="section-meus-medicamentos">
                 <div>
@@ -45,6 +46,7 @@
                     <p>Dia 26, sábado de Agosto de 2023</p>
                 </div>
             </section>
+            <!-- Sessão dos cards com os remédios -->
             <section class="section-remedios">
                 <div class="div-detalhe-remedio">
                     <div>
@@ -86,8 +88,8 @@
                 </div>
                 <div class="div-detalhe-remedio">
                     <div>
-                        <img  class="img-calendario" src="../imagens/calendariosol.png" alt="Imagem Calendário com sol"/>
-                        <p class="p-horario">09:00</p>
+                        <img  class="img-calendario" src="../imagens/calendariolua.png" alt="Imagem Calendário com sol"/>
+                        <p class="p-horario">19:00</p>
                     </div>
                     <div>
                         <h3 class="h2-nome-remedio">Omeprazol</h3>
@@ -106,17 +108,18 @@
             </section>
             <button class="open-modal">Adicionar remédios</button>
         </div>
-        <!-- MODAL -->
+        <!-- Modal -->
         <div id="fade" class="hide">
         </div>
         <div id="modal" class="hide">
+            <!-- Body do modal -->
             <div class="modal-body">
                 <img class="img-medica-modal" src="../imagens/medica.png"/>
                 <h2>Será você mesmo que irá cadastrar o remédio ou um tutor/responsável?</h2>
             </div>
             <div class="buttons-modal">
-                <button onclick="cadastroNomeRemedio()">Eu mesmo</button>
-                <button>Tutor/Responsável</button>
+                <button onclick="cadastroRemedioIdoso()">Eu mesmo</button>
+                <button onclick="cadastroRemedioTutor()">Tutor/Responsável</button>
                 <button class="close-modal">Fechar</button>
             </div>
         </div>
