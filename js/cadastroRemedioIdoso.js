@@ -7,8 +7,8 @@ btnAvancarNomeRemedio.forEach(item => {
   item.addEventListener('click', (e) => {
     //Evitar comportamento padrão de submit do formulário
     e.preventDefault();
-    const remedio = document.getElementById("nome-remedio")
-    if (remedio.value != "") {
+    const remedio = document.getElementById("nome-remedio").value;
+    if (remedio != "") {
       localStorage.setItem("nome-remedio", remedio);
       window.location.href = "cadastroDiaHoraRemedio.html";
     }
@@ -26,17 +26,17 @@ btnAvancarNomeRemedio.forEach(item => {
 btnAvancarDiaHoraRemedio.forEach(item => {
   item.addEventListener('click', (e) => {
     e.preventDefault();
-    const dia = document.getElementById("dia-remedio");
-    const hora = document.getElementById("dia-hora-remedio");
+    const dia = document.getElementById("dia-remedio").value;
+    const hora = document.getElementById("dia-hora-remedio").value;
 
-    if (dia.value != "" && hora.value != "") {
+    if (dia != "" && hora != "") {
       localStorage.setItem("dia-hora-remedio", hora);
       localStorage.setItem("dia-remedio", dia);
       window.location.href = "cadastroTipoRemedio.html";
     }
     else {
       alert("Os campos dia e hora do remédio devem ser preenchidos");
-      hora.value ? dia.classList.add('input-error') : hora.classList.add('input-error');
+      hora ? dia.classList.add('input-error') : hora.classList.add('input-error');
     }
 
     hora.addEventListener("click", () =>{
@@ -53,11 +53,11 @@ btnAvancarDiaHoraRemedio.forEach(item => {
 btnAvancarTipoRemedio.forEach(item => {
   item.addEventListener('click', (e) => {
     e.preventDefault();
-    const refeicao = document.getElementById("refeicao");
-    const quantidade = document.getElementById("qnt-remedio");
-    const tipo = document.getElementById("tipo-remedio");
+    const refeicao = document.getElementById("refeicao").value;
+    const quantidade = document.getElementById("qnt-remedio").value;
+    const tipo = document.getElementById("tipo-remedio").value;
 
-    if (quantidade.value != "" && tipo.value != "") {
+    if (quantidade != "" && tipo != "") {
       localStorage.setItem("refeicao", refeicao);
       localStorage.setItem("qnt-remedio", quantidade);
       localStorage.setItem("tipo-remedio", tipo);
@@ -67,7 +67,7 @@ btnAvancarTipoRemedio.forEach(item => {
     }
     else {
       alert("Os campos quantidade e tipo do remédio devem ser preenchidos");
-      quantidade.value ? tipo.classList.add('input-error') : quantidade.classList.add('input-error');
+      quantidade? tipo.classList.add('input-error') : quantidade.classList.add('input-error');
     }
     quantidade.addEventListener("click", () =>{
       quantidade.classList.remove('input-error');
