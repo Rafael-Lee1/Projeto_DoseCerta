@@ -85,6 +85,32 @@ const toggleModal = () => {
 
 });
 
+//pega dia atual e exibe na index
+function pegaHorarioAtual(){
+  let data = new Date();
+
+  const diasDaSemana = [
+    "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira",
+    "Quinta-feira", "Sexta-feira", "Sábado"
+  ];
+
+  const nomesDosMeses = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ];
+
+  let mes = data.getMonth();
+  let dia = data.getDay();
+
+  const dataAtual = document.querySelector('.p-data-atual');
+  let texto = `Dia ${data.getDate()}, ${diasDaSemana[dia]} de ${nomesDosMeses[mes]} de ${data.getFullYear()}`
+  dataAtual.innerHTML += texto
+
+   
+}
+
+pegaHorarioAtual()
+
 function editarBotao(button) {
   // Obtém o texto do botão (nome do remédio) que será passado para a página de edição
   var nomeRemedio = button.parentElement.parentElement.parentElement.querySelector(".h2-nome-remedio").innerHTML;
