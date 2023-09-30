@@ -16,6 +16,7 @@ html{
     --white-input: #F5F5F5;
     --red: #E24E6A;
     --red-light: #de95a2;
+    --rose: #fddfe5;
     --backgroud: #FAFCFD;
     --overlay:#040911;
     --blue: #067FD1;
@@ -122,6 +123,11 @@ input, button, .button{
 
 input{
     background: var(--white-input);
+}
+
+.input-error{
+    background-color: var(--rose);
+    border: .2rem solid var(--red);
 }
 
 /* Estilos botões */
