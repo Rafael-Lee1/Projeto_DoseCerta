@@ -179,9 +179,10 @@ main .container{
 /* Sessão que contem médica e texto de adicionar medicamentos */
 .section-main{
     display: grid;
-    grid-template-columns:25% 75%;
+    grid-template-columns:20rem 70rem;
     max-width: 100%;
-    margin-top: 5.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding-top: 2rem;
     align-items: center;
 }
@@ -190,14 +191,15 @@ main .container{
     .section-main{
         grid-template-columns:35rem;
         text-align: center;
-    }
-    .section-main button{
         margin: 0 auto;
+    }
+    .open-modal{
+        margin-left: 5rem;
     }
 }
 /* Imagem da médica quando não tem remédio cadastrado */
 .img-cirurgiao{
-    max-width: 80%;
+    max-width: 100%;
     border-radius: 50%;
 }
 @media(max-width: 768px) {
