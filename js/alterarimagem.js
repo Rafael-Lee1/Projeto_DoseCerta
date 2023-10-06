@@ -4,19 +4,28 @@ function verificarHora() {
     var data = new Date();
     var hora = data.getHours();
 
-    // Seleciona todos os elementos com a classe 'img-calendario'
-    var imagens = document.querySelectorAll('.img-calendario');
+    // Obtém a lista de remédios cadastrados com seus horários de administração
+    var remedios = [
+        { nome: "Insulina", horario: 10 },
+        { nome: "Nimesulina", horario: 14 },
+        { nome: "Omeprazol", horario: 19 }
+        // Adicione mais remédios e horários conforme necessário
+    ];
 
-    // Loop através de todas as imagens
-    for (var i = 0; i < imagens.length; i++) {
-        // Se a hora for entre 18 (6 da tarde) e 6 da manhã, muda para a imagem da lua
-        if (hora >= 18 || hora < 6) {
-            imagens[i].src = "../imagens/calendariolua.png";
-            imagens[i].alt = "Imagem Calendário com lua";
-        } else { // Caso contrário, muda para a imagem do sol
-            imagens[i].src = "../imagens/calendariosol.png";
-            imagens[i].alt = "Imagem Calendário com sol";
+    // Verifica se a hora atual corresponde a algum horário de administração
+    var imagemAtual = "calendariosol.png"; // Imagem padrão (sol)
+    for (var i = 0; i < remedios.length; i++) {
+        if (hora === remedios[i].horario) {
+            imagemAtual = "calendariolua.png"; // Muda para a imagem da lua
+            break; // Sai do loop assim que encontrar um horário correspondente
         }
+    }
+
+    // Atualiza todas as imagens com a imagem atual
+    var imagens = document.querySelectorAll('.img-calendario');
+    for (var j = 0; j < imagens.length; j++) {
+        imagens[j].src = "../imagens/" + imagemAtual;
+        imagens[j].alt = "Imagem Calendário com " + (imagemAtual === "calendariosol.png" ? "sol" : "lua");
     }
 }
 
