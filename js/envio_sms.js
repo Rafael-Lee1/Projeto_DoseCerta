@@ -17,18 +17,18 @@
       
       // Exemplo de como usar a função
       const horarioEspecifico = {
-        horas: 21, // Hora desejada (0-23)
-        minutos: 22, // Minuto desejado (0-59)
+        horas: 16, // Hora desejada (0-23)
+        minutos: 45, // Minuto desejado (0-59)
       };
       
       function minhaFuncao() {
         
         console.log("Função chamada no horário especificado!");
               const accountSid = 'AC0f186cddcf4b18d01125b4204179c32a';
-              const authToken = 'b4b312d863c16bb54d7e95b6a3d4d8fb';
+              const authToken = 'e9ee53ea857f454745926b95975b29b7';
               const fromNumber = '+18649913539';
               const messageBody = 'Teste'
-              const toNumber = '+5511934447251'
+              const toNumber = '+5527999369724'
 
               fetch(`https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`, {
                 method: 'POST',
