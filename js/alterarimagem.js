@@ -1,36 +1,21 @@
-// Função para verificar a hora e atualizar a imagem
-function verificarHora() {
-    // Obtém a hora atual
-    var data = new Date();
-    var hora = data.getHours();
+// Função para verificar a hora cadastrada pelo usuário e atualizar a imagem
+function verificarHoraCadastrada() {
+    // Obtém a hora cadastrada pelo usuário (você precisa definir como obter essa hora)
+    var horaCadastrada = 14; // Substitua 14 pela hora cadastrada pelo usuário
 
-    // Obtém a lista de remédios cadastrados com seus horários de administração
-    var remedios = [
-        { nome: "Insulina", horario: 10 },
-        { nome: "Nimesulina", horario: 14 },
-        { nome: "Omeprazol", horario: 19 }
-        // Adicione mais remédios e horários conforme necessário
-    ];
-
-    // Verifica se a hora atual corresponde a algum horário de administração
-    var imagemAtual = "calendariosol.png"; // Imagem padrão (sol)
-    for (var i = 0; i < remedios.length; i++) {
-        if (hora === remedios[i].horario) {
-            imagemAtual = "calendariolua.png"; // Muda para a imagem da lua
-            break; // Sai do loop assim que encontrar um horário correspondente
-        }
+    // Verifica se a hora cadastrada está dentro das 6h às 18h (das 6h00 às 18h59)
+    var imagemAtual = "calendariolua.png"; // Imagem da lua como padrão
+    if (horaCadastrada >= 6 && horaCadastrada < 18) {
+        imagemAtual = "calendariosol.png"; // Muda para a imagem do sol
     }
 
-    // Atualiza todas as imagens com a imagem atual
-    var imagens = document.querySelectorAll('.img-calendario');
-    for (var j = 0; j < imagens.length; j++) {
-        imagens[j].src = "../imagens/" + imagemAtual;
-        imagens[j].alt = "Imagem Calendário com " + (imagemAtual === "calendariosol.png" ? "sol" : "lua");
+    // Atualiza a imagem com base na hora cadastrada
+    var imagemRemedio = document.querySelector('.img-calendario');
+    if (imagemRemedio) {
+        imagemRemedio.src = "../imagens/" + imagemAtual;
+        imagemRemedio.alt = "Imagem Calendário com " + (imagemAtual === "calendariosol.png" ? "sol" : "lua");
     }
 }
 
-// Chama a função verificarHora quando a página carrega
-window.onload = verificarHora;
-
-// Chama a função verificarHora a cada minuto (60000 milissegundos)
-setInterval(verificarHora, 60000);
+// Chama a função verificarHoraCadastrada quando a página carrega (ou quando o usuário cadastra o horário)
+window.onload = verificarHoraCadastrada;
