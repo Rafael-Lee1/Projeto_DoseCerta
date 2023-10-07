@@ -52,10 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
   //Faz as criação dos elementos na index de acordo com o array do localStorage
   if (localStorage.hasOwnProperty("remedios")) {
     JSON.parse(localStorage.getItem("remedios")).forEach(remedio => {
+      const imagemLuaOuSol = verificarHoraCadastrada(parseInt(remedio.hora));
       const botaoHTML = `
           <div class="div-detalhe-remedio" id="${remedio.id}">
             <div>
-                <img  class="img-calendario" src="../imagens/calendariosol.png" alt="Imagem Calendário com sol"/>
+                <img  class="img-calendario" src="../imagens/${imagemLuaOuSol}/>
                 <p class="p-horario">${remedio.hora}</p>
             </div>
             <div>
@@ -108,6 +109,20 @@ const toggleModal = () => {
     el.addEventListener("click", () => toggleModal());
   });
 
+  //Verifica se o horário é de dia ou de noite e atribui a imagem correta
+function verificarHoraCadastrada(horaCadastrada) {
+    // Obtém a hora cadastrada pelo usuário (você precisa definir como obter essa hora)
+
+    // Verifica se a hora cadastrada está dentro das 6h às 18h (das 6h00 às 18h59)
+    var imagemAtual = ""; // Imagem da lua como padrão
+    if (horaCadastrada >= 6 && horaCadastrada < 18) {
+      return imagemAtual = `calendariosol.png" alt="Imagem Calendário com sol"`; // Muda para a imagem do sol
+    }
+    else{
+      return  imagemAtual = `calendariolua.png"  alt="Imagem Calendário com lua"`; 
+    }
+
+}
 
 //Pegar dia atual e exibe na index
 function pegaHorarioAtual(){
