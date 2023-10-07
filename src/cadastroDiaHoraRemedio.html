@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/formularios.css">
     <link rel="stylesheet" href="../styles/cadastroDiaHoraRemedio.css">
+    <link rel="stylesheet" href="../styles/modal.css">
 
 
     <!-- JAVASCRIPT -->
-    <script src="../js/cadastroRemedioIdoso.js" defer></script>
+    <script src="../js/cadastroDiaHoraRemedio.js" defer></script>
 
     <title>Dose Certa</title>
     
@@ -37,7 +38,7 @@
                 <section class="section-etapa">
                     <a href="cadastroNomeRemedio.html"><button data-tooltip="Etapa anterior!" class="btn-etapa-inicio btn-etapa">1</button></a>
                     <button data-tooltip="Você está aqui!" class="btn-etapa-destaque btn-etapa-meio btn-etapa">2</button>
-                    <button data-tooltip="Última etapa!" class="btn-avancar-dia-hora-remedio btn-etapa-final btn-etapa">3</button>
+                    <button data-tooltip="Última etapa!" class="btn-avancar-dia-hora-remedio btn-etapa-final btn-etapa open-modal">3</button>
                 </section>
                 <!-- Sessão do formulário -->
                 <section>
@@ -50,23 +51,39 @@
                                 <input type="time" class="dia-hora-remedio" id="dia-hora-remedio" name="dia-hora-remedio">
                                 <Select class="dia-remedio" id="dia-remedio" name="dia-remedio">
                                     <option value="">Escolha o dia</option>
-                                    <option value="todos">Todos os dias</option>
-                                    <option value="final">Final de semana</option>
-                                    <option value="segsex">Segunda a sexta</option>
-                                    <option value="seg">Segunda</option>
-                                    <option value="ter">Terça</option>
-                                    <option value="qua">Quarta</option>
-                                    <option value="qui">Quinta</option>
-                                    <option value="sex">Sexta</option>
+                                    <option value="Todos os dias">Todos os dias</option>
+                                    <option value="Final de semana">Final de semana</option>
+                                    <option value="Segunda a sexta">Segunda a sexta</option>
+                                    <option value="Segunda">Segunda</option>
+                                    <option value="Terça">Terça</option>
+                                    <option value="Quarta">Quarta</option>
+                                    <option value="Quinta">Quinta</option>
+                                    <option value="Sexta">Sexta</option>
                                 </Select>
                             </div>
+                            <div class="div-adicao-horario"></div>
                             <button id="button-adicionar-dia">Adicionar horário</button>
-                            <button class="btn-avancar-dia-hora-remedio" type="button">Avançar</button>
+                            <button class="btn-avancar-dia-hora-remedio open-modal" type="button">Avançar</button>
                             <a href="cadastroNomeRemedio.html"><button type="button" class="grey">Voltar</button></a>
                     </fieldset>
                     </form>
                 </section>
             </div>
+        <!-- Modal -->
+        <div class="modal">
+        <div id="fade" class="hide">
+        </div>
+        <div id="modal" class="hide">
+            <!-- Body do modal -->
+            <div class="modal-body">
+                <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
+                <h2 class="h2-campo">Ops! Parece que você esqueceu de preencher algum campo</h2>
+            </div>
+            <div class="buttons-modal-cadastro">
+                <button class="close-modal">Fechar</button>
+            </div>
+        </div>
+        </div>
         </main>
     </div>
 </body>

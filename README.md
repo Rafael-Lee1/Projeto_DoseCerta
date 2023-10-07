@@ -17,13 +17,41 @@ O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, 
 
 O projeto consiste no desenvolvimento de um aplicativo web chamado Dose Certa, que tem como objetivo auxiliar os usuários a gerenciar suas prescrições médicas, fornecendo lembretes de doses e facilitando o acompanhamento do tratamento. O aplicativo será intuitivo, acessível e fácil de usar, tornando-o adequado para pessoas de todas as idades.
 
-O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, prescrições médicas e respectivas doses e horários de administração dos medicamentos. A plataforma fornecerá um calendário interativo e um sistema de notificações para lembrar os usuários sobre os horários das doses, garantindo que o tratamento seja seguido corretamente.
+O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, prescrições médicas e horários de administração dos medicamentos. A plataforma fornecerá um calendário interativo e um sistema de notificações para lembrar os usuários sobre os horários das doses, auxiliando no tratamento.
 
-- `Funcionalidade 1`: Registro de Medicamentos: Os usuários poderão cadastrar seus medicamentos prescritos, incluindo informações como nome do medicamento, dosagem, forma de administração e frequência de uso.
-- `Funcionalidade 2`: Calendário de Doses: O aplicativo apresentará um calendário visual, onde os usuários poderão ver todas as doses agendadas para cada dia, facilitando o acompanhamento e evitando possíveis esquecimentos.
-- `Funcionalidade 3`: Lembretes e Notificações: O sistema de notificações enviará lembretes para os usuários nos horários programados para a administração dos medicamentos, ajudando a garantir a adesão ao tratamento.
-- `Funcionalidade 4`: Histórico e Relatórios: Os usuários poderão acessar um histórico completo de suas doses anteriores e gerar relatórios de adesão ao tratamento para compartilhar com seus profissionais de saúde.
-- `Funcionalidade 5`: Segurança e Privacidade: O aplicativo garantirá a segurança dos dados do usuário, protegendo suas informações pessoais e médicas por meio de criptografia e práticas de segurança recomendadas.
+- `Tela Login`: Tela para realizar o login na aplicação
+    - `Fluxo 1 (Entrar na conta)`: O usuário deverá preencher os campos e-mail e senha (campos obrigatórios) e depois clicar em "Entar na conta". Caso esteja cadastrado, será direcionado para página principal da aplicação, caso não, receberá um aviso em tela com possível motivo de invalidação. Haverá validações para se certificar que os campos não estão vazios e que o usuário está cadastrado em nosso banco de dados.
+    - `Fluxo 2 (Esqueceu senha)`: O usuário clicará no link "Esqueceu a senha?" e será direcionado para respectiva página.
+    - `Fluxo 3 (Criar conta)`: O usuário clicará no botão "Criar conta" e será direcionado para respectiva página.
+- `Tela Cadastro`: Tela para realizar o cadastro na aplicação
+    - `Fluxo 1 (Criar conta)`: O usuário deverá preencher todos campos dessa página(campos obrigatórios) e depois clicar em "Criar conta". Caso todas as informações preenchidas estejam corretas, será criada a conta e o usuário será direcionado para página de login novamente. Caso não, receberá um aviso em tela com possível motivo de invalidação. Haverá validações para se certificar que os campos não estão vazios e que são campos com formatos válidos (Ex.:E-mail).Os dados serão salvos no banco
+    - `Fluxo 2 (Voltar)`: O usuário clicará no botão voltar e será direcionado para página de login novamente.
+- `Tela Esqueceu Senha`:  Tela para recuperação de senha
+    - `Fluxo 1 (Esqueceu senha)`: O usuário deverá preencher o campo e-mail dessa página(campo obrigatório) e depois clicar em "Continua". Caso o e-mail for o correto, será enviado um e-mail de redefinição de senha. Caso não, receberá um aviso em tela com possível motivo de invalidação. Haverá validações para se certificar que os campos não estão vazios e que são campos com formatos válidos (Ex.:E-mail).
+    - `Fluxo 2 (Voltar)`: O usuário clicará no botão voltar e será direcionado para página de login novamente.
+- `Tela Index/Remédio`:  Tela de boas-vindas com todos ou nenhum remédio cadastrado, sendo a principal da aplicação.
+    - `Fluxo 1 (Adicionar Remédio)`: O usuário clicará no botão "Adicionar remédio" e receberá um aviso questionando quem irá realizar o cadastro podendo ser o próprio idoso ou um tutor:
+      - **Idoso:** Será direcionado para um formulário que possui etapas e poucas informações em tela;
+      - **Tutor:** Será direcionado para um formulário único, com todos os campos na primeira página;
+    - `Fluxo 2 (Excluir remédio)`: O usuário clicará no botão em formato de lixeira e será solicitado a confirmação da ação via popup, se confirmar o item clicado será excluído da lista de remédios da index e do banco de dados, se cancelar nenhuma ação será feita.
+    - `Fluxo 3 (Editar remédio)`: O usuário clicará no botão com formato de lápis e receberá um aviso questionando quem irá realizar o cadastro podendo ser o próprio idoso ou um tutor:
+      - **Idoso:** Será direcionado para um formulário que possui etapas e poucas informações em tela, os campos serão preenchidos com os dados do remédio que havia sido cadastrado anteriormente;
+      - **Tutor:** Será direcionado para um formulário único, com todos os campos na primeira página, os campos serão preenchidos com os dados do remédio que havia sido cadastrado anteriormente;
+- `Tela Cadastro Remédio Idoso`: Tela que possui os campos a serem preenchidos para cadastro do remédio.
+    - `Fluxo 1 (Cadastro Remédio Para Idoso)`: Após ser redirecionado pela página index, o usuário terá um formulário de cadastro de remédio, com uma barra de progresso dividido em três etapas:
+      - **Etapa Nome Remédio:** O usuário deverá digitar o nome do remédio que quer cadastrar e poderá utilizar um  filtro para auxiliar no preenchimento do campo que buscará nomes de remédios similares ao que foi digitado. Haverá um botão "Avançar" que ao ser clicado validará a informação do input nome remédio, que é obrigatório e portanto não pode ser vazio (o mesmo acontece se clicado na barra de progresso para próxima etapa). Haverá um botão "Voltar", que ao ser clicado permite que o usuário retorne ao Index.
+      - **Etapa Dia e Hora:** O usuário deverá digitar/selecionar o horário e o dia que o remédio deverá ser tormado, os campos não podem ser vazios e haverá uma validação ao clicar no botão "Avançar" (o mesmo acontece se clicado na barra de progresso para próxima etapa). Haverá um botão "Voltar", que ao ser clicado permite que o usuário retorne a etapa nome do remédio;
+        - Botão "Adicionar horário": Ao ser clicado, será adicionado dois novos campos (data e hora) para serem preenchidos com mais horários, além disso haverá também um botão "Remover horário", caso o Idoso tenha clicado por engano ou não queira mais adicionar remédio;
+      - **Etapa Tipo, Quandidade e Refeição** O usuário deverá digitar/selecionar a quantidade e o tipo do remédio a ser tormado, os campos não podem ser vazios e haverá uma validação ao clicar no botão "Salvar remédio" . Haverá um campo de seleção para que o Idoso preencha se toma antes ou depois da refeição, este não é obrigatório.Haverá um botão "Voltar", que ao ser clicado permite que o usuário retorne para etapa de dia e horário;
+      - Botão Salvar Remédio: Se as informações estiverem preenchidas, direciona o Idoso para página Index com o novo remédio aparecendo na lista de remédios;
+- `Tela Cadastro Remédio Tutor`: Tela que possui os campos a serem preenchidos para cadastro do remédio.
+    - `Fluxo 1 (Cadastro Remédio Para Tutor)`: Após ser redirecionado pela página index, o usuário terá um formulário de cadastro de remédio, com todos os seguintes campos:
+      - Nome do remédio: Haverá um filtro para auxilio no preenchimento que buscará os nomes que correspondem ao digitado no input. Campo obrigatório e que será válido ao clicar em "Salvar remédio";
+      - Hora e dia do remédio: Ambos os campos deverão ser preenchidos/selecionados. Haverá um botão com o sinal de "+" ao lado direito dos campos, que ao ser clicado aparecerá mais dois inputs(data e hora) que poderão ser preenchidos, esses campos virão com um botão com o sinal de "-" que ao ser clicado removerá os campos que haviam sido adicionados. Os campos são obrigatórios e serão validados ao clicar em "Salvar remédio";
+      - Quantidade e tipo do remédio: Ambos os campos deverão ser preenchidos/selecionados. Os campos são obrigatórios e serão validados ao clicar em "Salvar remédio";
+      - Refeição: O campo deverá ser preenchido/selecionado caso o paciente queira, portanto não é obrigatório; 
+      - Botão Salvar Remédio: Se as informações estiverem preenchidas, direciona o Idoso para página Index com o novo remédio aparecendo na lista de remédios;
+      - Botão Voltar: Direciona o usuário para Index, sem atualizações na lista de remédio;
 
 Acesse o endereço eletrônico <a href="https://dosecerta.up.railway.app/?">aqui</a> e saiba mais sobre as funcionalidades do projeto.
 

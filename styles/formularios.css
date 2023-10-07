@@ -179,3 +179,9 @@ span{
 [data-tooltip]:hover:after {
     display: block;
 }
+
+/* Separado novo campo dia e hora remédio */
+.separator{
+    max-width: 30rem;
+    margin-top: .5rem;
+}

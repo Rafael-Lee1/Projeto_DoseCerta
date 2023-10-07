@@ -44,6 +44,20 @@ a{
     color: inherit;
 }
 
+li{
+    list-style-type: none;
+    width: 30rem;
+    padding: .5rem;
+    background-color: var(--white-input);
+    border-radius: .5rem;
+}
+li:hover{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: var(--blue-light);
+    border: .2rem solid var(--blue);
+}
+
 /* Font size e font family das páginas */
 body, button, input, p{
     /*Intervalo de tamanho = no menor tamanho 18px, padrão 1.6rem, maior 2vw */
