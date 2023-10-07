@@ -17,8 +17,8 @@
       
       // Exemplo de como usar a função
       const horarioEspecifico = {
-        horas: 21, // Hora desejada (0-23)
-        minutos: 22, // Minuto desejado (0-59)
+        horas: 16, // Hora desejada (0-23)
+        minutos: 45, // Minuto desejado (0-59)
       };
       
       function minhaFuncao() {
