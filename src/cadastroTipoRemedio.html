@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/formularios.css">
     <link rel="stylesheet" href="../styles/cadastroTipoRemedio.css">
+    <link rel="stylesheet" href="../styles/modal.css">
 
     <!-- JAVASCRIPT -->
-    <script src="../js/cadastroRemedioIdoso.js" defer></script>
+    <script src="../js/cadastroTipoRemedio.js" defer></script>
     
     <title>Dose Certa</title>
 </head>
@@ -48,10 +49,10 @@
                                 <input id="qnt-remedio" type="number" name="qnt-remedio" placeholder="Ex.:1">
                                 <Select id="tipo-remedio" name="tipo-remedio">
                                     <option value="">Escolha o tipo</option>
-                                    <option value="comprimido">Comprimido</option>
-                                    <option value="capsula">Capsula</option>
-                                    <option value="injeção">Injeção</option>
-                                    <option value="gotas">Gotas</option>
+                                    <option value="Comprimido">Comprimido</option>
+                                    <option value="Capsula">Capsula</option>
+                                    <option value="Injeção">Injeção</option>
+                                    <option value="Gotas">Gotas</option>
                                 </Select>
                             </div>
                         </fieldset>
@@ -65,11 +66,26 @@
                                         <option value="Depois da refeição">Tomar depois da refeição</option>
                                     </Select>
                                 </div>
-                            <a href="index.html"><button type="button" class="btn-tipo-remedio">Salvar remédio</button></a>
+                            <a href="index.html"><button type="button" class="btn-tipo-remedio open-modal">Salvar remédio</button></a>
                             <a href="cadastroDiaHoraRemedio.html"><button type="button" class="grey">Voltar</button></a>
                         </fieldset>
                     </form>
                 </section>
+            </div>
+                    <!-- Modal -->
+        <div class="modal">
+            <div id="fade" class="hide">
+            </div>
+            <div id="modal" class="hide">
+                <!-- Body do modal -->
+                <div class="modal-body">
+                    <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
+                    <h2>Ops! Parece que você esqueceu de preencher algum campo</h2>
+                </div>
+                <div class="buttons-modal-cadastro">
+                    <button class="close-modal">Fechar</button>
+                </div>
+            </div>
             </div>
         </main>
     </div>

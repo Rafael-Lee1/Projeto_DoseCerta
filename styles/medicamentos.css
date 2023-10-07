@@ -45,7 +45,7 @@ main{
 /* Linha que separa o "Olá Mária" do "Como você está se sentindo..."*/
 .separator{
     background: var(--grey-light);
-    max-width: 40%;
+    max-width: 31rem;
     height: 1px;
     margin-bottom: 1rem;
 }
@@ -124,6 +124,11 @@ main{
 }
 /* Estilo do texto abaixo do nome do remedio dentro do card de remédio*/
 .p-detalhe-remedio{
+    color: var(--grey-dark);
+    font-size: 1.7rem;
+}
+/* Estilo do texto de refeição dentro do card de remédio*/
+.p-detalhe-refeicao{
     color: var(--grey-dark);
     font-size: 1.7rem;
 }

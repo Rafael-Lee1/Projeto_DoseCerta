@@ -21,9 +21,23 @@
         width: 30rem;
     }
 }
+/* Modifica campo adicional de dia */
+.detalhe-adicao-horario{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Modifica campo adicional de dia de acordo com o tamanho da tela */
+@media(max-width: 768px) {
+    .detalhe-adicao-horario{
+        display: block;
+    }
+}
+
 /* Botão vermelho para adicionar mais um dia e horário */
 #button-adicionar-dia{
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     background-color: var(--red-light);
     border-color: var(--red-light);
 }

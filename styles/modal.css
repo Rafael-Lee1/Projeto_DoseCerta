@@ -80,6 +80,11 @@
 .buttons-modal button{
   margin-left: 1rem;
 }
+
+.buttons-modal-cadastro button{
+  margin: 0 auto;
+  width: 15rem;
+}
 /* Estilo botão fechar*/
 .close-modal{
   width:10%;

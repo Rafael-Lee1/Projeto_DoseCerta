@@ -25,10 +25,10 @@
         
         console.log("Função chamada no horário especificado!");
               const accountSid = 'AC0f186cddcf4b18d01125b4204179c32a';
-              const authToken = 'b4b312d863c16bb54d7e95b6a3d4d8fb';
+              const authToken = '';
               const fromNumber = '+18649913539';
               const messageBody = 'Teste'
-              const toNumber = '+5511934447251'
+              const toNumber = ''
 
               fetch(`https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`, {
                 method: 'POST',
