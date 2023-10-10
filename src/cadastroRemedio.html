@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="../styles/formularios.css">
         <link rel="stylesheet" href="../styles/cadastroRemedio.css">
 
+        <!-- JAVASCRIPT -->
+        <script src="../js/cadastroRemedio.js" defer></script>
+
         <title>Dose Certa - Cadastro Remédio</title>
     </head>
 
@@ -46,10 +49,11 @@
                         <fieldset>
                             <!-- Inicio - (Grupo) - Horário e Dia do Remédio -->
                             <legend>Cadastro horário e dia de tomar o remédio</legend>
-                                <label class="labels-formulario" for="dia-hora-remedio">HORÁRIO E DIA DO REMÉDIO:<abbr title="Campo obrigatório">*</abbr></label>
+                                <div class="input-dia-hora"><label class="labels-formulario" for="dia-hora-remedio">HORÁRIO E DIA DO REMÉDIO:<abbr title="Campo obrigatório">*</abbr></label>
                                 <div class="div-dia-hora-remedio">
-                                    <input type="time" class="dia-hora-remedio" id="dia-hora-remedio" value="00:00">
+                                    <input type="time" class="dia-hora-remedio" id="dia-hora-remedio">
                                     <Select id="dia-remedio" class="dia-remedio">
+                                        <option value="">Escolha o dia</option>
                                         <option value="todos">Todos os dias</option>
                                         <option value="final">Final de semana</option>
                                         <option value="segsex">Segunda a sexta</option>
@@ -59,9 +63,10 @@
                                         <option value="qui">Quinta</option>
                                         <option value="sex">Sexta</option>
                                     </Select>                            
-                                    <button>+</button>
+                                    <button class="adicionar-dia-horario">+</button>
                                     <!-- <button class="grey">-</button> -->
                             </div>
+                        </div>
                             <!-- Fim - (Grupo) - Horário e Dia do Remédio -->
                             </fieldset>
                             <!-- Inicio - (Grupo) - Quantidade e Tipo do Remédio -->
@@ -69,8 +74,9 @@
                                 <legend>Cadastro da quantidade e tipagem do remédio</legend>
                                 <label class="labels-formulario" for="tipo-remedio">QUANTIDADE E TIPO DO REMÉDIO:<abbr title="Campo obrigatório">*</abbr></label>
                                 <div class="div-tipo-remedio">
-                                    <input id="qnt-remedio" type="number" name="tipo-remedio" placeholder="Ex.:1">
-                                    <Select>
+                                    <input id="qnt-remedio" type="number" name="qnt-remedio" placeholder="Ex.:1">
+                                    <Select id="tipo-remedio" name="tipo-remedio">
+                                        <option value="">Escolha o tipo</option>
                                         <option value="comprimido">Comprimido</option>
                                         <option value="capsula">Capsula</option>
                                         <option value="injecao">Injeção</option>
@@ -84,17 +90,34 @@
                             <fieldset>
                                 <legend>Cadastro se é para tomar o remédio antes ou depois da refeição</legend>
                             <label class="labels-formulario" for="refeicao">ANTES OU DEPOIS DA REFEIÇÃO:</label>
-                            <Select class="select-tipo-refeicao">
+                            <Select class="select-tipo-refeicao" id="refeicao" name="refeicao">
+                                <option value="">Escolha uma opção</option>
                                 <option value="antes">Tomar antes da refeição</option>
                                 <option value="depois">Tomar depois da refeição</option>
                             </Select>
                             <!-- Fim - (Grupo) - Antes, Durante ou Depois da Refeição -->
-                            <a href="#"><button type="submit">Salvar Remédio</button></a>
-                            <a href="./index.html"><button class="grey">Voltar</a></button></a>
+                            <a href="#"><button id="btn-salvar-remedio" class="btn-salvar-remedio" type="submit">Salvar Remédio</button></a>
+                            <a href="/src/index.html"><button id="btn-voltar" class="grey">Voltar</a></button></a>
                         </fieldset>
                     </form>
                 </section>
             </div>
+            <!-- Estou deixando o Modal comentado porque ele ficou aparecendo no html ;) -->
+            <!--             
+            <div class="modal">
+                <div id="fade" class="hide">
+                </div>
+                <div id="modal" class="hide">
+                    <div class="modal-body">
+                        <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
+                        <h2>Ops! Parece que você esqueceu de preencher algum campo</h2>
+                    </div>
+                    <div class="buttons-modal-cadastro">
+                        <button class="close-modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+             -->
         </main>
     </div>
 </body>
