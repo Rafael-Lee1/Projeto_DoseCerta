@@ -1,57 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
+const bntContinuar = document.querySelector('.btn-continuar');
+const emailInput = document.getElementById('email');
 
-    const form = document.querySelector('form');
-    const emailInput = document.querySelector('#email');
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        validateForm();
-    });
-
-    emailInput.addEventListener('blur', function() {
-        validateEmail();
-    });
-
-    function validateForm() {
-
-        const isValidEmail = validateEmail(emailInput);
-
-        if(isValidEmail){
-            form.submit();
-        }
-        /*const emailValue = emailInput.value.trim();
-
-        if (emailValue === '') {
-            alert('O campo E-mail deve estar preenchido');
-            emailInput.classList.add('input-error');
-        } else if (!isValidEmail(emailValue)) {
-            alert('O campo E-mail deve ser válido (deve conter @ e .com)');
-            emailInput.classList.add('input-error');
-        } else {
-            emailInput.classList.remove('input-error');
-        }
-
-        if (!emailInput.classList.contains('input-error')) {
-            form.submit(); 
-            
-        }*/
-    }
-
-    function validateEmail() {
-        const emailValue = emailInput.value.trim();
-        if (emailValue === '') {
-            alert('O campo E-mail deve estar preenchido');
-            emailInput.classList.add('input-error');
-        } else if (!isValidEmail(emailValue)) {
-            alert('O campo E-mail deve ser válido (deve conter @ e .com)');
-            emailInput.classList.add('input-error');
-        } else {
-            emailInput.classList.remove('input-error');
-        }
-    }
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
+bntContinuar.addEventListener('click', function(e) {
+    e.preventDefault();
+    validateEmail();
 });
+
+function validateEmail() {
+    const emailValue = emailInput.value;
+    if (emailValue === '') {
+        alert('O campo E-mail deve estar preenchido');
+        emailInput.classList.add('input-error');
+    } else if (!isValidEmail(emailValue)) {
+        alert('O campo E-mail deve ser válido (deve conter @ e .com)');
+        emailInput.classList.add('input-error');
+    } else {
+        window.location.href = "login.html"
+    }
+    //Quando o idoso clicar no campo e-mail, classe de erro some
+    emailInput.addEventListener("keyup", () => {
+        emailInput.classList.remove('input-error');
+    })
+}
+//Valida por regex se e-mail é válido com @ e .com
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
