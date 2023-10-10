@@ -38,7 +38,7 @@
                 <section class="section-etapa">
                     <a href="cadastroNomeRemedio.html"><button data-tooltip="Etapa anterior!" class="btn-etapa-inicio btn-etapa">1</button></a>
                     <button data-tooltip="Você está aqui!" class="btn-etapa-destaque btn-etapa-meio btn-etapa">2</button>
-                    <button data-tooltip="Última etapa!" class="btn-avancar-dia-hora-remedio btn-etapa-final btn-etapa open-modal">3</button>
+                    <button data-tooltip="Última etapa!" class="btn-avancar-dia-hora-remedio btn-etapa-final btn-etapa" onclick="toggleModal()">3</button>
                 </section>
                 <!-- Sessão do formulário -->
                 <section>
@@ -63,7 +63,7 @@
                             </div>
                             <div class="div-adicao-horario"></div>
                             <button id="button-adicionar-dia">Adicionar horário</button>
-                            <button class="btn-avancar-dia-hora-remedio open-modal" type="button">Avançar</button>
+                            <button class="btn-avancar-dia-hora-remedio" type="button" onclick="toggleModal()">Avançar</button>
                             <a href="cadastroNomeRemedio.html"><button type="button" class="grey">Voltar</button></a>
                     </fieldset>
                     </form>
@@ -77,7 +77,7 @@
             <!-- Body do modal -->
             <div class="modal-body">
                 <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
-                <h2 class="h2-campo">Ops! Parece que você esqueceu de preencher algum campo</h2>
+                <h2 class="h2-campo texto-body"></h2>
             </div>
             <div class="buttons-modal-cadastro">
                 <button class="close-modal">Fechar</button>

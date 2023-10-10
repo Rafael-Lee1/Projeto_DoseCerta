@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/formularios.css">
+    <link rel="stylesheet" href="../styles/modal.css">
 
     <!--javascript-->
     <script src="/js/cadastroIdoso.js" defer></script>
@@ -54,11 +55,24 @@
                             <label for="password" class="labels-formulario">SENHA: <abbr title="Campo obrigatório">*</abbr></label>
                             <input id="password" type="password" name="password" placeholder="Ex.: @ck1514654">
                         </div>
-                        <button class="btn-criar"><a href="./login.html">Criar conta</a></button>
+                        <button class="btn-criar open-modal"><a href="./login.html">Criar conta</a></button>
                         <button class="grey"><a href="./login.html">Voltar</a></button>
                 </fieldset>
                 </form>
             </section>
+        </div>
+        <div class="modal">
+            <div id="fade" class="hide">
+            </div>
+            <div id="modal" class="hide">
+                <div class="modal-body">
+                    <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
+                    <h2 class="texto-body"></h2>
+                </div>
+                <div class="buttons-modal-cadastro">
+                    <button class="close-modal">Fechar</button>
+                </div>
+            </div>
         </div>
     </main>
     </div>

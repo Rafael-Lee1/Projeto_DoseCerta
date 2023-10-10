@@ -9,25 +9,30 @@ const btnSalvarRemedio = document.getElementById("btn-salvar-remedio");
 const btnVoltar = document.getElementById("btn-voltar");
 const btnAdicionarDiaHorario = document.querySelector(".adicionar-dia-horario");
 const divDiaHora = document.querySelector(".input-dia-hora")
+const htmlModal = document.querySelector(".modal")
 
 // Função para verificar se algum campo está vazio
 function verificarCamposVazios() {
   const campos = [
-    { input: inputNomeRemedio, nome: "nome-remedio" },
-    { input: inputDiaHoraRemedio, nome: "dia-hora-remedio" },
-    { input: inputDiaRemedio, nome: "dia-remedio" },
-    { input: inputQtdRemedio, nome: "qnt-remedio" },
-    { input: inputTipoRemedio, nome: "tipo-remedio" },
-    { input: inputRefeicao, nome: "refeicao" }
+    { input: inputNomeRemedio, nome: "nome-remedio", label: "nome do remédio" },
+    { input: inputDiaHoraRemedio, nome: "dia-hora-remedio", label: "horário do remédio" },
+    { input: inputDiaRemedio, nome: "dia-remedio", label: "dia do remédio" },
+    { input: inputQtdRemedio, nome: "qnt-remedio", label: "quantidade do remédio" },
+    { input: inputTipoRemedio, nome: "tipo-remedio", label: "tipo do remédio" },
+    { input: inputRefeicao, nome: "refeicao", label:"antes ou depois da refeição" }
   ];
 
   for (const campo of campos) {
     if (campo.input.value === "" && campo.nome != "refeicao") {
+      //Modal aparece com a mensagem do campo não preenchido
+      alteraTextoModal(campo.label);
       return campo.input.classList.add('input-error'); // Adiciona a classe 'input-error' ao campo vazio
     } else {
         localStorage.setItem(campo.nome, campo.input.value)
     }
   }
+  //Remove modal da página
+  htmlModal.innerHTML = ""
   window.location.href="index.html" // Redireciona para pagina inicial (index)
 }
 
@@ -82,3 +87,22 @@ btnAdicionarDiaHorario.addEventListener("click", (e) => {
         <button class="grey">-</button>`
     divDiaHora.innerHTML += inputDiaHora
 });
+
+function alteraTextoModal(campo){
+  const bodyModal = document.querySelector(".texto-body")
+  bodyModal.innerHTML = `Ops! O campo ${campo} deve ser preenchido`
+}
+  const openModalButton = document.querySelector(".open-modal");
+  const closeModalButton = document.querySelector(".close-modal");
+  const modal = document.querySelector("#modal");
+  const fade = document.querySelector("#fade");
+
+      
+  const toggleModal = () => {
+      modal.classList.toggle("hide");
+      fade.classList.toggle("hide");
+  };
+
+  [openModalButton, closeModalButton, fade].forEach((el) => {
+      el.addEventListener("click", () => toggleModal());
+  });

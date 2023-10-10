@@ -34,7 +34,7 @@
                 <!-- Sessão com botões de progresso -->
                 <section class="section-etapa">
                     <button data-tooltip="Você está aqui!" class="btn-etapa-destaque btn-etapa-inicio btn-etapa">1</button>
-                    <button data-tooltip="Próxima etapa!"class="btn-avancar-nome-remedio btn-etapa-meio btn-etapa open-modal">2</button>
+                    <button data-tooltip="Próxima etapa!"class="btn-avancar-nome-remedio btn-etapa-meio btn-etapa" onclick="toggleModal()">2</button>
                     <a href="cadastroTipoRemedio.html"><button data-tooltip="Etapa final!"class="btn-etapa-final btn-etapa">3</button></a>
                 </section>
                 <!-- Sessão com o formulário -->
@@ -46,7 +46,7 @@
                                 <label for="nome-remedio">NOME DO REMÉDIO: <abbr title="Campo obrigatório">*</abbr></label>
                                 <input type="text" id="nome-remedio" name="nome-remedio"  placeholder="Ex.: Omeprazol">
                                 <ul id="resultados-busca-remedio"></ul>
-                                <button class="btn-avancar-nome-remedio open-modal">Avançar</button>
+                                <button class="btn-avancar-nome-remedio" onclick="toggleModal()">Avançar</button>
                                 <a href="index.html"><button type="button" class="grey btn-voltar">Voltar</button></a>
                         </fieldset>
                     </form>
@@ -60,7 +60,7 @@
             <!-- Body do modal -->
             <div class="modal-body">
                 <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
-                <h2>Ops! Parece que você esqueceu de preencher algum campo</h2>
+                <h2 class="texto-body"></h2>
             </div>
             <div class="buttons-modal-cadastro">
                 <button class="close-modal">Fechar</button>

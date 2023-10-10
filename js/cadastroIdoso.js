@@ -25,11 +25,11 @@ function validateForm() {
         hideErrorMessage(nomeInput);
     }
     else if(inputValueEmail === "" || !isValidEmail(inputValueEmail)){
-        showErrorMessage(emailInput, "Por favor, o campo email deve conter (@ e .com)");
+        showErrorMessage(emailInput, "O campo email deve conter (@ e .com)");
         hideErrorMessage(emailInput)
     }
     else if(inputValueTelefone.length !== 11){
-        showErrorMessage(telefoneInput, 'O campo telefone tem quer 11 números!');
+        showErrorMessage(telefoneInput, 'O campo telefone tem quer 11 dígitos!');
         hideErrorMessage(telefoneInput)
     }
     else if(inputValueSenha.length != 6){
@@ -49,7 +49,7 @@ function isValidEmail(email) {
 
 //add menssagem error
 function showErrorMessage(input, message) {
-    alert(message);
+    alteraTextoModal(message);
     input.classList.add('input-error');
 }
 
@@ -59,3 +59,22 @@ function hideErrorMessage(input) {
         input.classList.remove('input-error');
     })
 }
+
+function alteraTextoModal(campo){
+    const bodyModal = document.querySelector(".texto-body")
+    bodyModal.innerHTML = `Ops!${campo}`
+  }
+    const openModalButton = document.querySelector(".open-modal");
+    const closeModalButton = document.querySelector(".close-modal");
+    const modal = document.querySelector("#modal");
+    const fade = document.querySelector("#fade");
+  
+        
+    const toggleModal = () => {
+        modal.classList.toggle("hide");
+        fade.classList.toggle("hide");
+    };
+  
+    [openModalButton, closeModalButton, fade].forEach((el) => {
+        el.addEventListener("click", () => toggleModal());
+    });

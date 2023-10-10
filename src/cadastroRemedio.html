@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../styles/global.css">
         <link rel="stylesheet" href="../styles/formularios.css">
         <link rel="stylesheet" href="../styles/cadastroRemedio.css">
+        <link rel="stylesheet" href="../styles/modal.css">
 
         <!-- JAVASCRIPT -->
         <script src="../js/cadastroRemedio.js" defer></script>
@@ -54,14 +55,14 @@
                                     <input type="time" class="dia-hora-remedio" id="dia-hora-remedio">
                                     <Select id="dia-remedio" class="dia-remedio">
                                         <option value="">Escolha o dia</option>
-                                        <option value="todos">Todos os dias</option>
-                                        <option value="final">Final de semana</option>
-                                        <option value="segsex">Segunda a sexta</option>
-                                        <option value="seg">Segunda</option>
-                                        <option value="ter">Terça</option>
-                                        <option value="qua">Quarta</option>
-                                        <option value="qui">Quinta</option>
-                                        <option value="sex">Sexta</option>
+                                        <option value="Todos os dias">Todos os dias</option>
+                                        <option value="Final de semana">Final de semana</option>
+                                        <option value="Segunda a sexta">Segunda a sexta</option>
+                                        <option value="Segunda">Segunda</option>
+                                        <option value="Terça">Terça</option>
+                                        <option value="Quarta">Quarta</option>
+                                        <option value="Quinta">Quinta</option>
+                                        <option value="Sexta">Sexta</option>
                                     </Select>                            
                                     <button class="adicionar-dia-horario">+</button>
                                     <!-- <button class="grey">-</button> -->
@@ -77,10 +78,10 @@
                                     <input id="qnt-remedio" type="number" name="qnt-remedio" placeholder="Ex.:1">
                                     <Select id="tipo-remedio" name="tipo-remedio">
                                         <option value="">Escolha o tipo</option>
-                                        <option value="comprimido">Comprimido</option>
-                                        <option value="capsula">Capsula</option>
-                                        <option value="injecao">Injeção</option>
-                                        <option value="gotas">Gotas</option>
+                                        <option value="Comprimido">Comprimido</option>
+                                        <option value="Capsula">Capsula</option>
+                                        <option value="Injeção">Injeção</option>
+                                        <option value="Gotas">Gotas</option>
                                     </Select>
                                 </div>
                             <!-- Fim - (Grupo) - Quantidade e Tipo do Remédio -->
@@ -92,32 +93,29 @@
                             <label class="labels-formulario" for="refeicao">ANTES OU DEPOIS DA REFEIÇÃO:</label>
                             <Select class="select-tipo-refeicao" id="refeicao" name="refeicao">
                                 <option value="">Escolha uma opção</option>
-                                <option value="antes">Tomar antes da refeição</option>
-                                <option value="depois">Tomar depois da refeição</option>
+                                <option value="Antes da refeição">Tomar antes da refeição</option>
+                                <option value="Depois da refeição">Tomar depois da refeição</option>
                             </Select>
                             <!-- Fim - (Grupo) - Antes, Durante ou Depois da Refeição -->
-                            <a href="#"><button id="btn-salvar-remedio" class="btn-salvar-remedio" type="submit">Salvar Remédio</button></a>
+                            <a href="#"><button id="btn-salvar-remedio" class="btn-salvar-remedio open-modal">Salvar Remédio</button></a>
                             <a href="/src/index.html"><button id="btn-voltar" class="grey">Voltar</a></button></a>
                         </fieldset>
                     </form>
                 </section>
-            </div>
-            <!-- Estou deixando o Modal comentado porque ele ficou aparecendo no html ;) -->
-            <!--             
+            </div>    
             <div class="modal">
                 <div id="fade" class="hide">
                 </div>
                 <div id="modal" class="hide">
                     <div class="modal-body">
                         <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
-                        <h2>Ops! Parece que você esqueceu de preencher algum campo</h2>
+                        <h2 class="texto-body"></h2>
                     </div>
                     <div class="buttons-modal-cadastro">
                         <button class="close-modal">Fechar</button>
                     </div>
                 </div>
             </div>
-             -->
         </main>
     </div>
 </body>

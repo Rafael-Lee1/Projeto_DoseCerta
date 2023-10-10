@@ -66,7 +66,7 @@
                                         <option value="Depois da refeição">Tomar depois da refeição</option>
                                     </Select>
                                 </div>
-                            <a href="index.html"><button type="button" class="btn-tipo-remedio open-modal">Salvar remédio</button></a>
+                            <a href="index.html"><button type="button" class="btn-tipo-remedio" onclick="toggleModal()">Salvar remédio</button></a>
                             <a href="cadastroDiaHoraRemedio.html"><button type="button" class="grey">Voltar</button></a>
                         </fieldset>
                     </form>
@@ -80,7 +80,7 @@
                 <!-- Body do modal -->
                 <div class="modal-body">
                     <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
-                    <h2>Ops! Parece que você esqueceu de preencher algum campo</h2>
+                    <h2 class="texto-body"></h2>
                 </div>
                 <div class="buttons-modal-cadastro">
                     <button class="close-modal">Fechar</button>

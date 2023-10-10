@@ -28,7 +28,13 @@ btnAvancarDiaHoraRemedio.forEach(item => {
     }
     //Caso os campos estejam vazio adiciona a classe de erro no input que falta preencher
     else {
-      inputHora.value ? inputDia.classList.add('input-error') : inputHora.classList.add('input-error');
+      if(inputHora.value){
+        inputDia.classList.add('input-error')
+        alteraTextoModal("dia do remédio")
+      } else{
+        inputHora.classList.add('input-error');
+        alteraTextoModal("hora do remédio")
+      } 
     }
     //Remove a classe de erro ao digitar no input hora
     inputHora.addEventListener("click", () =>{
@@ -95,16 +101,22 @@ btnAdicionarHorario.addEventListener("click", async (e) => {
 
 //Funçao com toggle responsavel por fazer o modal aparecer
 
-const openModalButton = document.querySelector(".open-modal");
-const closeModalButton = document.querySelector(".close-modal");
-const modal = document.querySelector("#modal");
-const fade = document.querySelector("#fade");
-    
-const toggleModal = () => {
-    modal.classList.toggle("hide");
-    fade.classList.toggle("hide");
-};
+function alteraTextoModal(campo){
+  const bodyModal = document.querySelector(".texto-body")
+  bodyModal.innerHTML = `Ops! O campo ${campo} deve ser preenchido`
+}
+  const openModalButton = document.querySelectorAll(".open-modal");
+  const closeModalButton = document.querySelector(".close-modal");
+  const modal = document.querySelector("#modal");
+  const fade = document.querySelector("#fade");
 
-[openModalButton, closeModalButton, fade].forEach((el) => {
-    el.addEventListener("click", () => toggleModal());
-});
+      
+  function toggleModal(){
+      modal.classList.toggle("hide");
+      fade.classList.toggle("hide");
+  };
+
+  [closeModalButton, fade].forEach((el) => {
+      el.addEventListener("click", () => toggleModal());
+
+  });

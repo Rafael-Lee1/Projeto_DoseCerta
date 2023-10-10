@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/formularios.css">
+    <link rel="stylesheet" href="../styles/modal.css">
 
     <!--Javascript-->
     <script src="/js/esqueceuSenha.js" defer></script>
@@ -41,11 +42,24 @@
                                 <label for="e-mail">DIGITE SEU E-MAIL: <abbr title="Campo obrigatório">*</abbr></label>
                                 <input type="e-mail" id="email" name="text" placeholder="Ex: name@gmail.com">
                             </div>
-                            <button class="btn-continuar"><a href="index.html">Continuar</a></button>
+                            <button class="btn-continuar open-modal"><a href="index.html">Continuar</a></button>
                             <button class="grey"><a href="login.html">Voltar</a></button>
                     </fieldset>
                     </form>
                 </section>
+            </div>
+            <div class="modal">
+                <div id="fade" class="hide">
+                </div>
+                <div id="modal" class="hide">
+                    <div class="modal-body">
+                        <img class="img-medica-modal" src="../imagens/ajuda-remedio.png"/>
+                        <h2 class="texto-body"></h2>
+                    </div>
+                    <div class="buttons-modal-cadastro">
+                        <button class="close-modal">Fechar</button>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
