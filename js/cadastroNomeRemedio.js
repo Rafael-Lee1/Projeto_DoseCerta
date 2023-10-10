@@ -43,7 +43,7 @@ const resultadosRemedios = document.getElementById('resultados-busca-remedio');
 inputRemedio.addEventListener('input', () =>{
     const resultadosRemedios = document.getElementById('resultados-busca-remedio');
     const remedioBuscado = inputRemedio.value.toUpperCase();
-    const nomesUnicos = new Set()
+    let nomesUnicos = new Set()
     //Limpa ul que trás opções toda vez que uma nova letra é digitada
     resultadosRemedios.innerHTML = ''
     //Chama a API com o nome do remédio solicitado
