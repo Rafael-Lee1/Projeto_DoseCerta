@@ -3,7 +3,7 @@ O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, 
 
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/Rafael-Lee1/Icons/blob/5b9c43342c4b1f6cd9bd21e18b17418b1a0657ab/DoseCertaCadastrado%20-%203.png">
+  <img width="460" height="300" src="https://github.com/Rafael-Lee1/Icons/blob/eb700ce880b1137685777f38426a650356090d3b/Pitch%20(1).gif">
 </p>
 
 <h1 align="center"> Dose Certa </h1>
