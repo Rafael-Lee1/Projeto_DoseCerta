@@ -53,14 +53,14 @@ O Dose Certa permitirá que os usuários cadastrem suas informações pessoais, 
       - Botão Salvar Remédio: Se as informações estiverem preenchidas, direciona o Idoso para página Index com o novo remédio aparecendo na lista de remédios;
       - Botão Voltar: Direciona o usuário para Index, sem atualizações na lista de remédio;
 
-Acesse o endereço eletrônico <a href="https://dosecerta.up.railway.app/?">aqui</a> e saiba mais sobre as funcionalidades do projeto.
+Acesse o endereço eletrônico <a href="https://dose-certa-76186.web.app/index.html">aqui</a> e saiba mais sobre as funcionalidades do projeto.
 
 Descubra o Dose Certa e facilite o controle dos seus medicamentos diários. Organize suas doses de forma simples e eficiente, e tenha lembretes personalizados para nunca mais esquecer de tomar seus remédios. Cuide da sua saúde com praticidade e segurança, tornando cada dia mais saudável e tranquilo.
 
 # 📁 Acesso ao projeto
 
 **Você pode acessar os arquivos do projeto clicando <a href="https://github.com/Rafael-Lee1/MeuMedicamento_Web.git">aqui</a>.</p>
-**Você pode acessar o projeto clicando <a href="https://dosecerta.up.railway.app/?">aqui</a>.</p>
+**Você pode acessar o projeto clicando <a href="https://dose-certa-76186.web.app/index.html">aqui</a>.</p>
 
 # 🛠️ Tecnologias utilizadas
 
